@@ -1,0 +1,16 @@
+@import "variables";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #{$background-color};
+  --primary: #{$primary-color};
+}
+
+body {
+  background: #{$background-color};
+  color: #{$primary-color};
+  font-family: var(--font-sf-pro);
+}
