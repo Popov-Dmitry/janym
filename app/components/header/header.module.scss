@@ -1,0 +1,31 @@
+.header {
+  @apply grid grid-cols-2 w-full;
+  @apply px-40px py-14px;
+
+  .left {
+    @apply flex items-center justify-center;
+  }
+
+  .right {
+    @apply flex items-center justify-between;
+  }
+
+  .logo {
+    @apply flex items-center justify-center gap-14px;
+  }
+
+  .links {
+    @apply flex items-center;
+
+    :nth-child(2) {
+      @apply ml-117px;
+    }
+    :nth-child(3) {
+      @apply ml-104px;
+    }
+  }
+
+  .link {
+    @apply font-semibold;
+  }
+}
