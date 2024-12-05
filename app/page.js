@@ -27,10 +27,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.products}>
-        {productsPreviewMock.map((product) => (
-          <ProductPreview key={product.title} {...product} />
-        ))}
+      <div className={styles.block} id="shop">
+        <div className={styles.blockTitle}>Autumn-Winter 25</div>
+        <div className={styles.products}>
+          {productsPreviewMock.map((product) => (
+            <ProductPreview key={product.title} {...product} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -12,9 +12,12 @@
   @apply py-60px;
 }
 
-
 .block {
   @include block;
+}
+
+.blockTitle {
+  @apply font-medium text-32px leading-34px;
 }
 
 .fw {
