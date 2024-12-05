@@ -1,6 +1,7 @@
 import { productsPreviewMock } from "@/data";
 import ProductPreview from "@/app/components/product-preview/ProductPreview";
 import styles from "./page.module.scss";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -33,6 +34,38 @@ export default function Home() {
           {productsPreviewMock.map((product) => (
             <ProductPreview key={product.title} {...product} />
           ))}
+        </div>
+      </div>
+
+      <div className={styles.blockFullHeight}>
+        <div className={styles.blockTitle}>About Janym</div>
+        <div className={styles.twoCols}>
+          <div className={styles.leftCol}>
+            <div className={styles.leftColDescription}>
+              Ethnicity, avant-garde, romanticism,
+              irony, deconstructivism,
+              craftsmanship, environmentalism
+            </div>
+            <div className={styles.leftColBottom}>
+              <div className={styles.leftColBottomTexts}>
+                <div className={styles.leftColCaption}>Values</div>
+                <div className={styles.leftColBottomText}>
+                  <div>Cultural heritage</div>
+                  <div>Environmental friendliness</div>
+                </div>
+              </div>
+              <div className={styles.leftColBottomTexts}>
+                <div className={styles.leftColCaption}>Philosophy</div>
+                <div className={styles.leftColBottomText}>
+                  <div>Harmony with nature, culture</div>
+                  <div>Connecting the past and the future</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.colImage}>
+            <Image src="/about.png" alt="" fill />
+          </div>
         </div>
       </div>
     </div>

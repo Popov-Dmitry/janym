@@ -1,27 +1,64 @@
 @mixin block {
-  @apply px-40px;
+  @apply px-40px py-20px;
   @apply w-100%;
 }
 
 .twoCols {
   @apply grid grid-cols-2;
+  @apply h-100%;
 }
 
 .container {
   @apply flex flex-col justify-center items-center gap-100px;
-  @apply py-60px;
+  @apply py-40px;
 }
 
 .block {
   @include block;
 }
 
+.blockFullHeight {
+  @include block;
+  @apply h-100vh;
+  @apply flex flex-col;
+}
+
 .blockTitle {
   @apply font-medium text-32px leading-34px;
 }
 
+.colImage {
+  @apply relative w-100%;
+}
+
+.leftCol {
+  @apply mt-auto;
+
+  .leftColBottom {
+    @apply mt-110px;
+    @apply grid grid-cols-2;
+  }
+
+  .leftColDescription {
+    @apply font-medium text-58px leading-58px tracking-[0.01em];
+  }
+
+  .leftColBottomTexts {
+    @apply flex flex-col gap-14px;
+  }
+
+  .leftColCaption {
+    @apply font-semibold;
+  }
+
+  .leftColBottomText {
+    @apply font-medium text-32px leading-34px;
+  }
+}
+
 .fw {
   @include block;
+  @apply py-0;
   @apply flex items-center;
 
   .fwTitle {
@@ -44,7 +81,7 @@
 
 .fwBottom {
   @include block;
-  @apply pr-300px mt-14px;
+  @apply pr-300px py-0 mt-14px;
   @apply flex-col gap-12px;
 
   .fwBottomCaption {
