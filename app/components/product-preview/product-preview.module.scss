@@ -1,0 +1,27 @@
+.productPreview {
+  @apply flex flex-col items-center w-100%;
+
+  .content {
+    @apply px-100px pt-40px pb-80px;
+  }
+
+  .imageWrapper {
+    @apply h-300px lg:h-500px;
+    @apply flex items-center justify-center;
+  }
+
+  .image {
+    @apply max-h-[100%];
+  }
+
+  .text {
+    @apply font-medium text-32px leading-34px;
+    @apply flex flex-col items-center gap-32px;
+    @apply mt-40px;
+  }
+
+  .divider {
+    @apply w-100%;
+    @apply border border-black;
+  }
+}
