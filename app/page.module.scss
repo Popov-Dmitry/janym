@@ -1,5 +1,57 @@
+@mixin block {
+  @apply px-40px;
+  @apply w-100%;
+}
+
 .twoCols {
   @apply grid grid-cols-2;
+}
+
+.container {
+  @apply flex flex-col justify-center items-center gap-100px;
+  @apply py-60px;
+}
+
+
+.block {
+  @include block;
+}
+
+.fw {
+  @include block;
+  @apply flex items-center;
+
+  .fwTitle {
+    @apply font-medium text-58px leading-58px tracking-[0.02em];
+  }
+
+  .fwSubtitle {
+    @apply font-medium text-58px leading-58px tracking-[-0.01em];
+    @apply ml-73px;
+  }
+
+  .fwCaption {
+    @apply font-semibold ml-200px;
+  }
+}
+
+.fwImage {
+  @apply mt-100px;
+}
+
+.fwBottom {
+  @include block;
+  @apply pr-300px mt-14px;
+  @apply flex-col gap-12px;
+
+  .fwBottomCaption {
+    @apply flex gap-30px;
+    @apply font-semibold;
+  }
+
+  .fwBottomText {
+    @apply text-58px leading-60px;
+  }
 }
 
 .products {
