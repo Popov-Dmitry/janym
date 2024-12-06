@@ -3,6 +3,12 @@
   @apply w-100%;
 }
 
+@mixin blockFullHeight {
+  @include block;
+  @apply h-100vh;
+  @apply flex flex-col;
+}
+
 .twoCols {
   @apply grid grid-cols-2;
   @apply h-100%;
@@ -18,9 +24,7 @@
 }
 
 .blockFullHeight {
-  @include block;
-  @apply h-100vh;
-  @apply flex flex-col;
+  @include blockFullHeight;
 }
 
 .blockTitle {
@@ -96,4 +100,9 @@
 
 .products {
   @apply grid grid-cols-2 gap-20px;
+}
+
+.ecological {
+  @include blockFullHeight;
+  @apply pb-0 pr-0;
 }

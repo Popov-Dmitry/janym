@@ -2,6 +2,7 @@ import { productsPreviewMock } from "@/data";
 import ProductPreview from "@/app/components/product-preview/ProductPreview";
 import styles from "./page.module.scss";
 import Image from "next/image";
+import { joinClassNames } from "@/utils/join-class-names";
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.blockFullHeight}>
+      <div className={styles.blockFullHeight} id="about">
         <div className={styles.blockTitle}>About Janym</div>
         <div className={styles.twoCols}>
           <div className={styles.leftCol}>
@@ -65,6 +66,40 @@ export default function Home() {
           </div>
           <div className={styles.colImage}>
             <Image src="/about.png" alt="" fill />
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.ecological} id="ecological">
+        <div className={styles.blockTitle}>Approach to garment Creation</div>
+        <div className={styles.twoCols}>
+          <div className={styles.leftCol}>
+            <div className={styles.leftColCaption}>
+              Fashion
+            </div>
+            <div className={joinClassNames(styles.leftColDescription, "mt-16px")}>
+              By focusing on recycled,
+              renewable materials, clean electricity, and low-carbon shipping
+            </div>
+            <div className={joinClassNames(styles.leftColBottom, "pb-40px")}>
+              <div className={styles.leftColBottomTexts}>
+                <div className={styles.leftColCaption}>Values</div>
+                <div className={styles.leftColBottomText}>
+                  <div>Cultural heritage</div>
+                  <div>Environmental friendliness</div>
+                </div>
+              </div>
+              <div className={styles.leftColBottomTexts}>
+                <div className={styles.leftColCaption}>Philosophy</div>
+                <div className={styles.leftColBottomText}>
+                  <div>Harmony with nature, culture</div>
+                  <div>Connecting the past and the future</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.colImage}>
+            <Image src="/optimizer.png" alt="" fill />
           </div>
         </div>
       </div>
