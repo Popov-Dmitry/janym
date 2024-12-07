@@ -31,6 +31,10 @@
   @apply font-medium text-32px leading-34px;
 }
 
+.caption {
+  @apply font-semibold;
+}
+
 .colImage {
   @apply relative w-100%;
 }
@@ -105,4 +109,24 @@
 .ecological {
   @include blockFullHeight;
   @apply pb-0 pr-0;
+}
+
+.packageGrid {
+  @apply grid grid-cols-5 gap-32px;
+}
+
+.packageLastCol {
+  @apply ml-[-40px];
+}
+
+.packageTags {
+  @apply absolute top-0 bottom-0;
+}
+
+.packageImages {
+  @apply mt-14px relative;
+}
+
+.packageImage {
+  @apply h-100% w-50%;
 }

@@ -103,6 +103,54 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className={styles.block}>
+        <div className={styles.packageGrid}>
+          <div className={joinClassNames(styles.blockTitle, "col-span-2")}>
+            Package
+          </div>
+          <div>
+            <div className={styles.caption}>AW</div>
+            <div className={joinClassNames(styles.blockTitle, "mt-14px")}>
+              <div>Saturday</div>
+              <div>October 21st</div>
+              <div>from 8pm until 1am</div>
+            </div>
+          </div>
+          <div>
+            <div className={styles.caption}>Autumn Winter</div>
+            <div className={joinClassNames(styles.blockTitle, "mt-14px")}>
+              <div>Bene Bene</div>
+              <div>Via Giovanni Battista</div>
+              <div>20129</div>
+            </div>
+          </div>
+          <div>
+            <div className={joinClassNames(styles.caption, styles.packageLastCol)}>
+              Personal Investigation
+            </div>
+          </div>
+        </div>
+        <div className={joinClassNames(styles.packageGrid, "mt-117px")}>
+          <div className={joinClassNames(styles.blockTitle, "col-span-2")}>
+            One package without paint for different garments
+          </div>
+          <div className={styles.blockTitle}>1</div>
+          <div className={styles.blockTitle}>2</div>
+          <div className={joinClassNames(styles.blockTitle, styles.packageLastCol)}>3</div>
+        </div>
+        <div className={styles.packageImages}>
+          <div className={joinClassNames(styles.packageGrid)}>
+            <img src="/package.png" className={"col-span-3"} />
+          </div>
+          <div className={joinClassNames(styles.packageTags, styles.packageGrid)}>
+            <div className={"col-span-2"} />
+            <img src="/pants.png" className={styles.packageImage} />
+            <img src="/knitwear.png" className={styles.packageImage} />
+            <img src="/shirt.png" className={joinClassNames(styles.packageImage, styles.packageLastCol)} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
