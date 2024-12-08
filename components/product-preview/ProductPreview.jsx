@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./product-preview.module.scss";
-import Button from "@/app/components/button/Button";
+import Button from "@/components/button/Button";
 
 const ProductPreview = ({ image, title, price }) => {
   return (

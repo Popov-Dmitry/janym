@@ -1,5 +1,5 @@
 import { productsPreviewMock } from "@/data";
-import ProductPreview from "@/app/components/product-preview/ProductPreview";
+import ProductPreview from "@/components/product-preview/ProductPreview";
 import styles from "./page.module.scss";
 import Image from "next/image";
 import { joinClassNames } from "@/utils/join-class-names";
