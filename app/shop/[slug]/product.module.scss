@@ -1,0 +1,53 @@
+.container {
+  @apply grid grid-cols-2 gap-15px;
+  @apply h-[calc(100vh_-_56px)];
+}
+
+.imageWrapper {
+  @apply flex items-center justify-center h-[calc(100vh_-_56px)];
+}
+
+.image {
+  @apply h-100%;
+  @apply self-center;
+}
+
+.content {
+  @apply pr-40px pt-60px;
+  @apply min-h-100%;
+  @apply flex flex-col;
+}
+
+.title, .description, .price {
+  @apply text-58px leading-58px tracking-[-0.01em];
+  @apply [@media(max-height:950px)]:text-32px [@media(max-height:950px)]:leading-32px;
+}
+
+.price {
+  @apply my-auto;
+}
+
+.description {
+  @apply mt-54px;
+  @apply [@media(max-height:950px)]:mt-32px;
+}
+
+.specification {
+  @apply text-32px leading-34px;
+  @apply mt-60px;
+  @apply [@media(max-height:950px)]:mt-32px;
+}
+
+.bottom {
+  @apply mt-auto;
+}
+
+.caption {
+  @apply leading-23px;
+}
+
+.divider {
+  @apply w-100%;
+  @apply border border-black;
+  @apply mt-19px;
+}
