@@ -21,6 +21,7 @@ export const productMock = {
   price: 600,
   images: [
     "/mock/product/1.png",
-    "/mock/product/2.png"
+    "/mock/product/2.png",
+    "/mock/products-preview/tumar.png",
   ]
 };

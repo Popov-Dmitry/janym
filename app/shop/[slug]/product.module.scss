@@ -4,7 +4,8 @@
 }
 
 .imageWrapper {
-  @apply flex items-center justify-center h-[calc(100vh_-_56px)];
+  @apply h-[calc(100vh_-_57px)];
+  @apply overflow-hidden;
 }
 
 .image {

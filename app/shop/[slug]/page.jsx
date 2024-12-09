@@ -2,13 +2,15 @@ import React from "react";
 import styles from "./product.module.scss";
 import { productMock } from "@/data";
 import Button from "@/components/button/Button";
+import PhotoSlider from "@/components/photo-slider/PhotoSlider";
 
 const Product = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.imageWrapper}>
-        <img src={productMock.images[0]} alt={productMock.title} className={styles.image} />
-      </div>
+      <PhotoSlider photos={productMock.images} className={styles.imageWrapper} />
+      {/*<div className={styles.imageWrapper}>*/}
+      {/*  <img src={productMock.images[0]} alt={productMock.title} className={styles.image} />*/}
+      {/*</div>*/}
       <div className={styles.content}>
         <div className={styles.title}>{productMock.title}</div>
         <div className={styles.description}>{productMock.description}</div>
