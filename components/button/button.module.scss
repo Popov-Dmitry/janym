@@ -1,14 +1,18 @@
 .button {
-  @apply px-20px py-60px;
-  @apply text-54px no-underline;
+  @apply px-8px py-20px;
+  @apply md:px-20px md:py-60px;
+  @apply text-28px no-underline;
+  @apply md:text-54px;
   @apply cursor-pointer;
   @apply w-100%;
+  @apply text-center
 }
 
 .sfPro {
-  @apply font-sf-pro font-medium leading-54px tracking-[-0.01em] text-center;
+  @apply font-sf-pro leading-26px;
+  @apply md:leading-54px md:tracking-[-0.01em];
 }
 
 .beVietnamPro {
-  @apply font-be-vietnam-pro leading-68px text-center tracking-tighter;
+  @apply font-be-vietnam-pro leading-68px tracking-tighter;
 }

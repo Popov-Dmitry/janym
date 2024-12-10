@@ -53,6 +53,7 @@ const sizes = {
   "64px": "64px",
   "66px": "66px",
   "68px": "68px",
+  "70px": "70px",
   "72px": "72px",
   "73px": "73px",
   "77px": "77px",
@@ -136,6 +137,9 @@ module.exports = {
         ...sizes
       },
       lineHeight: {
+        ...sizes
+      },
+      maxHeight: {
         ...sizes
       },
       maxWidth: {

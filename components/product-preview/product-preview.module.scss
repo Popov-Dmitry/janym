@@ -2,22 +2,26 @@
   @apply flex flex-col items-center w-100%;
 
   .content {
-    @apply px-60px pt-40px pb-80px;
+    @apply px-4px pt-16px pb-32px;
+    @apply md:px-60px md:pt-40px md:pb-80px;
   }
 
   .imageWrapper {
-    @apply h-300px lg:h-500px;
+    @apply h-500px;
     @apply flex items-center justify-center;
   }
 
   .image {
-    @apply max-h-[100%];
+    @apply max-h-100%;
   }
 
   .text {
-    @apply font-medium text-32px leading-34px;
-    @apply flex flex-col items-center gap-32px;
-    @apply mt-40px;
+    @apply text-16px leading-26px tracking-wider;
+    @apply md:text-32px md:leading-34px md:tracking-normal;
+    @apply flex flex-col items-center;
+    @apply md:gap-32px;
+    @apply mt-20px;
+    @apply md:mt-40px;
   }
 
   .divider {

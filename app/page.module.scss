@@ -1,21 +1,31 @@
 @mixin block {
-  @apply px-40px py-20px;
+  @apply px-10px;
+  @apply md:px-40px md:py-20px;
   @apply w-100%;
 }
 
 @mixin blockFullHeight {
   @include block;
-  @apply h-100vh;
+  @apply md:h-100vh;
   @apply flex flex-col;
 }
 
+.mobile {
+  @apply md:hidden;
+}
+
+.desktop {
+  @apply hidden md:block;
+}
+
 .twoCols {
-  @apply grid grid-cols-2;
+  @apply md:grid md:grid-cols-2;
   @apply h-100%;
 }
 
 .container {
-  @apply flex flex-col justify-center items-center gap-100px;
+  @apply flex flex-col justify-center items-center gap-88px;
+  @apply md:gap-100px;
   @apply py-40px;
 }
 
@@ -28,7 +38,8 @@
 }
 
 .blockTitle {
-  @apply font-medium text-32px leading-34px;
+  @apply font-semibold text-16px leading-16px tracking-wider;
+  @apply md:font-medium md:text-32px md:leading-34px;
 }
 
 .caption {
@@ -36,74 +47,96 @@
 }
 
 .colImage {
-  @apply relative w-100%;
+  @apply relative w-100% aspect-square;
+  @apply md:aspect-auto;
 }
 
 .leftCol {
   @apply mt-auto;
 
   .leftColBottom {
-    @apply mt-110px;
+    @apply mt-70px;
+    @apply md:mt-110px;
     @apply grid grid-cols-2;
   }
 
   .leftColDescription {
-    @apply font-medium text-58px leading-58px tracking-[0.01em];
+    @apply mt-22px;
+    @apply md:mt-0;
+    @apply text-22px leading-26px;
+    @apply md:text-58px md:leading-58px md:tracking-[0.01em];
   }
 
   .leftColBottomTexts {
-    @apply flex flex-col gap-14px;
+    @apply flex flex-col gap-16px;
+    @apply md:gap-14px;
   }
 
   .leftColCaption {
-    @apply font-semibold;
+    @apply text-16px leading-17px;
+    @apply md:font-semibold md:leading-auto;
   }
 
   .leftColBottomText {
-    @apply font-medium text-32px leading-34px;
+    @apply text-16px leading-17px;
+    @apply md:text-32px md:leading-34px;
   }
 }
 
-.fw {
+.heroWrapper {
+  @apply hidden md:block;
+}
+
+.heroWrapperMobile {
+  @apply md:hidden;
+}
+
+.hero {
   @include block;
   @apply py-0;
   @apply flex items-center;
 
-  .fwTitle {
-    @apply font-medium text-58px leading-58px tracking-[0.02em];
-  }
-
-  .fwSubtitle {
-    @apply font-medium text-58px leading-58px tracking-[-0.01em];
+  .heroSubtitle {
+    @apply text-58px leading-58px tracking-[-0.01em];
     @apply ml-73px;
   }
 
-  .fwCaption {
+  .heroCaption {
     @apply font-semibold ml-200px;
   }
 }
 
-.fwImage {
-  @apply mt-100px;
+.heroTitle {
+  @apply text-16px leading-16px tracking-wider;
+  @apply md:text-58px md:leading-58px md:tracking-[0.02em];
 }
 
-.fwBottom {
+.heroImage {
+  @apply mt-80px;
+  @apply md:mt-100px;
+}
+
+.heroBottom {
   @include block;
   @apply pr-300px py-0 mt-14px;
   @apply flex-col gap-12px;
 
-  .fwBottomCaption {
+  .heroBottomCaption {
     @apply flex gap-30px;
     @apply font-semibold;
   }
+}
 
-  .fwBottomText {
-    @apply text-58px leading-60px;
-  }
+.heroBottomText {
+  @apply text-28px leading-28px;
+  @apply mt-24px;
+  @apply md:text-58px md:leading-60px;
+  @apply md:mt-0;
 }
 
 .products {
-  @apply grid grid-cols-2 gap-20px;
+  @apply grid grid-cols-1 gap-4px;
+  @apply md:grid-cols-2 md:gap-20px;
 }
 
 .ecological {
@@ -129,4 +162,22 @@
 
 .packageImage {
   @apply h-100% w-50%;
+}
+
+.packageMobileGrid {
+  @apply grid grid-cols-2 gap-8px;
+  @apply mt-20px;
+
+  .packageMobileGridLeft {
+    @apply flex flex-col justify-between;
+    @apply my-36px;
+  }
+
+  .packageMobileImage {
+    @apply relative;
+  }
+
+  .packageMobileTag {
+    @apply absolute bottom-[36px];
+  }
 }
