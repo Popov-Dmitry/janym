@@ -1,0 +1,11 @@
+.container {
+  @apply w-100vw h-[calc(100vh_-_56px)];
+  @apply fixed bottom-0 left-0;
+  @apply bg-white;
+  @apply flex items-center justify-center;
+  @apply cursor-pointer;
+}
+
+.image {
+  @apply h-100%;
+}

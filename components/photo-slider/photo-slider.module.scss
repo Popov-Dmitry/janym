@@ -5,11 +5,11 @@
   @apply overscroll-contain;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  //@apply scroll-smooth;
 
   .photoWrapper {
     @apply min-h-100% min-w-100%;
     @apply flex items-center justify-center;
+    @apply cursor-pointer;
   }
 
   .photo {
