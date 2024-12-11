@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./product.module.scss";
 import { productMock } from "@/data";
-import Button from "@/components/button/Button";
 import PhotoSlider from "@/components/photo-slider/PhotoSlider";
+import AddToBagButton from "@/clientSections/shop/product/AddToBagButton";
 
 const Product = () => {
   return (
@@ -23,7 +23,7 @@ const Product = () => {
             from the date of confirmation of the order.
           </div>
           <div className={styles.divider} />
-          <Button text="Add to bag" />
+          <AddToBagButton productId={productMock.slug} />
         </div>
       </div>
     </div>

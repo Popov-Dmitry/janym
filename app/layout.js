@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "@/styles/globals.scss";
 import Header from "@/components/header/Header";
+import { CartProvider } from "@/providers/cart-provider";
 
 const sfPro = localFont({
   src: "../fonts/sf-pro.otf",
@@ -22,8 +23,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${sfPro.variable} ${beVietnamPro.variable} antialiased`}>
-        <Header />
-        <main>{children}</main>
+        <CartProvider>
+          <Header />
+          <main>{children}</main>
+        </CartProvider>
       </body>
     </html>
   );
