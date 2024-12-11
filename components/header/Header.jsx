@@ -14,9 +14,9 @@ const Header = () => {
       </div>
       <div className={styles.right}>
         <div className={styles.links}>
-          <Link href="#shop" className={styles.link}>Shop</Link>
-          <Link href="#about" className={styles.link}>About</Link>
-          <Link href="#ecological" className={styles.link}>Ecological</Link>
+          <Link href="/#shop" className={styles.link}>Shop</Link>
+          <Link href="/#about" className={styles.link}>About</Link>
+          <Link href="/#ecological" className={styles.link}>Ecological</Link>
         </div>
         <div>
           <Link href="/bag" className={styles.link}>Bag</Link>
