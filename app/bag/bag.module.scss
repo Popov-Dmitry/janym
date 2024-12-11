@@ -1,0 +1,48 @@
+.container {
+  @apply px-40px;
+}
+
+.empty {
+  @apply h-[calc(100vh_-_56px)] w-100%;
+  @apply flex justify-center items-center;
+  @apply text-60px;
+}
+
+.block {
+  @apply grid grid-cols-2 gap-30px;
+  @apply border-b-2 border-black;
+  @apply py-60px;
+
+  .imageWrapper {
+    @apply max-h-[230px];
+    @apply flex items-center justify-center;
+  }
+
+  .image {
+    @apply max-h-100%;
+  }
+
+  .details {
+    @apply flex flex-col;
+  }
+
+  .top {
+    @apply flex justify-between items-center gap-8px;
+    @apply text-58px leading-58px tracking-[-0.01em];
+  }
+
+  .specification {
+    @apply text-16px leading-26px;
+    @apply mt-32px;
+  }
+
+  .remove {
+    @apply text-16px leading-17px underline cursor-pointer;
+    @apply mt-auto;
+  }
+
+  .total {
+    @apply text-54px leading-54px tracking-[-0.01em];
+    @apply text-end;
+  }
+}
