@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./product-preview.module.scss";
-import Button from "@/components/button/Button";
+import AddToBagButton from "@/clientSections/shop/product/AddToBagButton";
 
-const ProductPreview = ({ image, title, price }) => {
+const ProductPreview = ({ slug, image, title, price }) => {
   return (
     <div className={styles.productPreview}>
       <div className={styles.content}>
@@ -15,7 +15,7 @@ const ProductPreview = ({ image, title, price }) => {
         </div>
       </div>
       <div className={styles.divider} />
-      <Button text="Add to bag" />
+      <AddToBagButton productId={slug} />
     </div>
   );
 };
