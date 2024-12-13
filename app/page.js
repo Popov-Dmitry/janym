@@ -1,10 +1,13 @@
-import { productsPreviewMock } from "@/data";
-import ProductPreview from "@/components/product-preview/ProductPreview";
 import styles from "./page.module.scss";
+import ProductPreview from "@/components/product-preview/ProductPreview";
 import Image from "next/image";
 import { joinClassNames } from "@/utils/join-class-names";
+import { getPreviews } from "@/utils/db-requests";
 
-export default function Home() {
+export default async function Home() {
+  const products = await getPreviews();
+  console.log(products);
+
   return (
     <div className={styles.container}>
       <div className={styles.heroWrapper}>
@@ -42,7 +45,7 @@ export default function Home() {
       <div className={styles.block} id="shop">
         <div className={styles.blockTitle}>Autumn-Winter 25</div>
         <div className={styles.products}>
-          {productsPreviewMock.map((product) => (
+          {products.map((product) => (
             <ProductPreview key={product.title} {...product} />
           ))}
         </div>
