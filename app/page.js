@@ -6,14 +6,15 @@ import { getPreviews } from "@/utils/db-requests-server";
 
 export default async function Home() {
   const products = await getPreviews();
-  console.log(products);
 
   return (
     <div className={styles.container}>
       <div className={styles.heroWrapper}>
         <div className={styles.hero}>
-          <div className={styles.heroTitle}>FW’24</div>
-          <div className={styles.heroSubtitle}>Double Wrap Bracelet</div>
+          <div className={styles.heroTitleWrapper}>
+            <div className={styles.heroTitle}>FW’24</div>
+            <div className={styles.heroSubtitle}>Double Wrap Bracelet</div>
+          </div>
           <div className={styles.heroCaption}>
             <div>Janym Sol</div>
             <div>FW’24</div>

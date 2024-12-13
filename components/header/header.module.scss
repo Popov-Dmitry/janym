@@ -1,34 +1,22 @@
 .header {
   @apply grid grid-cols-1 w-full;
-  @apply md:grid-cols-2;
+  @apply md:grid-cols-12 md:gap-24px;
   @apply px-40px py-14px;
 
   .left {
-    @apply flex items-center justify-center;
-  }
-
-  .right {
-    @apply hidden;
-    @apply items-center justify-between;
-    @apply md:flex;
+    @apply flex items-center justify-center col-span-6;
   }
 
   .logo {
     @apply flex items-center justify-center gap-14px;
   }
 
-  .links {
-    @apply flex items-center;
-
-    :nth-child(2) {
-      @apply ml-117px;
-    }
-    :nth-child(3) {
-      @apply ml-104px;
-    }
-  }
-
   .link {
+    @apply hidden md:block;
     @apply font-semibold;
+
+    &:last-child {
+      @apply col-span-3 ml-auto;
+    }
   }
 }

@@ -12,16 +12,10 @@ const Header = () => {
           <Image src="/janum.svg" width={75} height={28} alt="logo" />
         </Link>
       </div>
-      <div className={styles.right}>
-        <div className={styles.links}>
-          <Link href="/#shop" className={styles.link}>Shop</Link>
-          <Link href="/#about" className={styles.link}>About</Link>
-          <Link href="/#ecological" className={styles.link}>Ecological</Link>
-        </div>
-        <div>
-          <Link href="/bag" className={styles.link}>Bag</Link>
-        </div>
-      </div>
+      <Link href="/#shop" className={styles.link}>Shop</Link>
+      <Link href="/#about" className={styles.link}>About</Link>
+      <Link href="/#ecological" className={styles.link}>Ecological</Link>
+      <Link href="/bag" className={styles.link}>Bag</Link>
     </div>
   );
 };
