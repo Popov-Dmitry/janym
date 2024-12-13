@@ -1,15 +1,23 @@
 "use client";
 
 import styles from "./bag.module.scss";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useCart } from "@/providers/cart-provider";
-import { bagMock } from "@/data";
 import { joinClassNames } from "@/utils/join-class-names";
 import Checkbox from "@/components/checkbox/Checkbox";
 import Button from "@/components/button/Button";
+import { getProductsFromCart } from "@/utils/db-requests-client";
 
 const Bag = () => {
   const { cart, removeItem } = useCart();
+  const [cartDetails, setCartDetails] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const cartDetails = await getProductsFromCart(cart);
+      setCartDetails(cartDetails);
+    })();
+  }, [cart]);
 
   if (cart.length === 0) {
     return (
@@ -19,15 +27,12 @@ const Bag = () => {
     );
   }
 
-  //TODO: get from api
-  const cartDetails = bagMock.filter((item) => cart.includes(item.slug));
-
   return (
     <div className={styles.container}>
       {cartDetails.map((item) => (
         <div className={styles.block} key={item.slug}>
           <div className={styles.imageWrapper}>
-            <img src={item.image} alt={item.title} className={styles.image} />
+            <img src={item.cover} alt={item.title} className={styles.image} />
           </div>
           <div className={styles.details}>
             <div className={styles.top}>
