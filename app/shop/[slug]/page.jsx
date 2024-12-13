@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./product.module.scss";
 import PhotoSlider from "@/components/photo-slider/PhotoSlider";
 import AddToBagButton from "@/clientSections/shop/product/AddToBagButton";
-import { getProduct } from "@/utils/db-requests";
+import { getProduct } from "@/utils/db-requests-server";
 import { redirect } from "next/navigation";
 
 const Product = async ({ params }) => {

@@ -1,7 +1,9 @@
-import { createClient } from "@/utils/supabase";
+"use server";
+
+import { createSupabaseServerClient } from "@/utils/supabase-server-client";
 
 export const getPreviews = async () => {
-  const supabase = await createClient();
+  const supabase = await createSupabaseServerClient();
   const { data } = await supabase.from("products")
     .select("slug, cover, title, price");
 
@@ -9,7 +11,7 @@ export const getPreviews = async () => {
 }
 
 export const getProduct = async (slug) => {
-  const supabase = await createClient();
+  const supabase = await createSupabaseServerClient();
   const { data } = await supabase.from("products")
     .select("title, description, material, color, size, price, images")
     .eq("slug", slug);

@@ -2,7 +2,7 @@ import styles from "./page.module.scss";
 import ProductPreview from "@/components/product-preview/ProductPreview";
 import Image from "next/image";
 import { joinClassNames } from "@/utils/join-class-names";
-import { getPreviews } from "@/utils/db-requests";
+import { getPreviews } from "@/utils/db-requests-server";
 
 export default async function Home() {
   const products = await getPreviews();
