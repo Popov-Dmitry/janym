@@ -5,9 +5,13 @@ import React, { useEffect, useState } from "react";
 const CartStateContext = React.createContext(undefined);
 
 const initCartState = () => {
-  const storedCart = JSON.parse(localStorage.getItem("cart"));
+  if (typeof window !== 'undefined') {
+    const storedCart = JSON.parse(localStorage?.getItem("cart"));
 
-  return storedCart ? storedCart : [];
+    return storedCart ? storedCart : [];
+  }
+
+  return  [];
 };
 
 export function CartProvider(props) {
@@ -27,7 +31,9 @@ export function CartProvider(props) {
   }
 
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
+    if (typeof window !== 'undefined') {
+      localStorage?.setItem("cart", JSON.stringify(cart));
+    }
   }, [cart]);
 
   return (
