@@ -6,7 +6,8 @@ import { getProduct } from "@/utils/db-requests-server";
 import { redirect } from "next/navigation";
 
 const Product = async ({ params }) => {
-  const product = await getProduct(params.slug);
+  const { slug } = await params;
+  const product = await getProduct(slug);
 
   if (!product) {
     redirect("/");
