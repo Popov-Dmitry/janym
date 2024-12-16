@@ -31,7 +31,7 @@ const Product = async ({ params }) => {
             from the date of confirmation of the order.
           </div>
           <div className={styles.divider} />
-          <AddToBagButton productId={product.slug} />
+          <AddToBagButton productId={slug} />
         </div>
       </div>
     </div>

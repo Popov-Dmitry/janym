@@ -1,31 +1,31 @@
 .container {
-  @apply grid grid-cols-2 gap-15px;
-  @apply h-[calc(100vh_-_56px)];
+  @apply grid grid-cols-1 gap-15px;
+  @apply md:grid-cols-2;
+  @apply md:h-[calc(100vh_-_56px)];
 }
 
 .imageWrapper {
-  @apply h-[calc(100vh_-_56px)];
+  @apply h-[70vh];
+  @apply md:h-[calc(100vh_-_56px)];
   @apply overflow-hidden;
 }
 
-.image {
-  @apply h-100%;
-  @apply self-center;
-}
-
 .content {
-  @apply pr-40px pt-60px;
+  @apply mx-10px;
+  @apply md:pr-40px md:pt-60px md:mx-0;
   @apply min-h-100%;
   @apply flex flex-col;
 }
 
 .title, .description, .price {
-  @apply text-58px leading-58px tracking-[-0.01em];
+  @apply text-32px leading-32px;
+  @apply md:text-58px md:leading-58px md:tracking-[-0.01em];
   @apply [@media(max-height:950px)]:text-32px [@media(max-height:950px)]:leading-32px;
 }
 
 .price {
-  @apply my-auto;
+  @apply my-32px;
+  @apply md:my-auto;
 }
 
 .description {
