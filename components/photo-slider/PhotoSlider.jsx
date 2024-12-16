@@ -1,13 +1,12 @@
 "use client";
 
 import styles from "./photo-slider.module.scss";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { joinClassNames } from "@/utils/join-class-names";
-import PhotoViewer from "@/components/photo-viewer/PhotoViewer";
 
 const PhotoSlider = ({ photos, className }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isOpenViewer, setIsOpenViewer] = useState(false);
+  const [isFullView, setIsFullView] = useState(false);
   const ref = useRef(null);
 
   const handleWheel = (event) => {
@@ -26,33 +25,35 @@ const PhotoSlider = ({ photos, className }) => {
     }
   };
 
+  useEffect(() => {
+    if (ref.current && ref.current.scrollTop === ref.current.clientHeight * (currentIndex)) {
+      ref.current.scrollBy({ behavior: "instant", top: currentIndex });
+    }
+
+  }, [isFullView]);
+
   return (
     <>
       <div
-        className={joinClassNames(styles.photoSlider, className)}
+        className={joinClassNames(isFullView ? styles.fullView : styles.photoSlider, className)}
         onWheel={handleWheel}
         onScroll={handleScroll}
         ref={ref}
       >
         {photos.map((photo) => (
           <div
-            className={styles.photoWrapper}
+            className={isFullView ? undefined : styles.photoWrapper}
             key={photo}
-            onClick={() => setIsOpenViewer(true)}
+            onClick={() => setIsFullView((prevState) => !prevState)}
           >
             <img
               src={photo}
               alt={""}
-              className={styles.photo}
+              className={isFullView ? styles.fullViewPhoto : styles.photo}
             />
           </div>
         ))}
       </div>
-      <PhotoViewer
-        photo={photos[currentIndex]}
-        isOpen={isOpenViewer}
-        setIsOpen={setIsOpenViewer}
-      />
     </>
   );
 };
