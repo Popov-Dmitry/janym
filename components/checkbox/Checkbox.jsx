@@ -8,7 +8,7 @@ const Checkbox = ({ text, checked = false, onChange }) => {
 
   const handleChange = (e) => {
     setChecked(e.target.checked);
-    onChange(e.target.checked);
+    onChange && onChange(e.target.checked);
   }
 
   return (
