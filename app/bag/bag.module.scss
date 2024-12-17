@@ -1,5 +1,5 @@
 .container {
-  @apply px-40px;
+  @apply px-10px md:px-40px;
 }
 
 .empty {
@@ -9,9 +9,10 @@
 }
 
 .block {
-  @apply grid grid-cols-2 gap-30px;
+  @apply grid grid-cols-1 gap-30px;
+  @apply md:grid-cols-2;
   @apply border-b-2 border-black;
-  @apply py-60px;
+  @apply py-48px md:py-60px;
 
   .imageWrapper {
     @apply max-h-[230px];
@@ -27,22 +28,24 @@
   }
 
   .top {
+    @apply text-32px leading-32px;
+    @apply md:text-58px md:leading-58px md:tracking-[-0.01em];
     @apply flex justify-between items-center gap-8px;
-    @apply text-58px leading-58px tracking-[-0.01em];
   }
 
   .specification {
     @apply text-16px leading-26px;
-    @apply mt-32px;
+    @apply mt-24px md:mt-32px;
   }
 
   .remove {
     @apply text-16px leading-17px underline cursor-pointer;
-    @apply mt-auto;
+    @apply mt-24px md:mt-auto;
   }
 
   .total {
-    @apply text-54px leading-54px tracking-[-0.01em];
+    @apply text-32px leading-32px;
+    @apply md:text-54px md:leading-54px md:tracking-[-0.01em];
     @apply text-end;
   }
 }
