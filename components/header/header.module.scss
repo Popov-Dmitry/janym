@@ -2,6 +2,7 @@
   @apply grid grid-cols-1 w-full;
   @apply md:grid-cols-12 md:gap-24px;
   @apply px-40px py-14px;
+  @apply relative;
 
   .left {
     @apply flex items-center justify-center col-span-6;
@@ -16,7 +17,8 @@
     @apply font-semibold;
 
     &:last-child {
-      @apply col-span-3 ml-auto;
+      @apply block absolute right-[40px] top-[14px];
+      @apply md:static md:col-span-3 md:ml-auto;
     }
   }
 }
