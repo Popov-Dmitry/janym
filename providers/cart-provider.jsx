@@ -4,19 +4,10 @@ import React, { useEffect, useState } from "react";
 
 const CartStateContext = React.createContext(undefined);
 
-const initCartState = () => {
-  if (typeof window !== 'undefined') {
-    const storedCart = JSON.parse(localStorage?.getItem("cart"));
-
-    return storedCart ? storedCart : [];
-  }
-
-  return  [];
-};
-
 export function CartProvider(props) {
   const { children } = props;
-  const [cart, setCart] = useState(initCartState());
+  const [isCartLoaded, setIsCartLoaded] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const addItem = (item) => {
     setCart(prev => ([...prev, item]));
@@ -31,10 +22,21 @@ export function CartProvider(props) {
   }
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage?.setItem("cart", JSON.stringify(cart));
+    if (isCartLoaded) {
+      if (typeof window !== 'undefined') {
+        localStorage?.setItem("cart", JSON.stringify(cart));
+      }
+    } else {
+      setIsCartLoaded(true);
+      if (typeof window !== 'undefined') {
+        const storedCart = JSON.parse(localStorage?.getItem("cart"));
+        setCart(storedCart ? storedCart : []);
+      } else {
+        setCart([]);
+      }
     }
-  }, [cart]);
+
+  }, [cart, isCartLoaded]);
 
   return (
     <CartStateContext.Provider value={{ cart, addItem, removeItem, isInCart }}>
