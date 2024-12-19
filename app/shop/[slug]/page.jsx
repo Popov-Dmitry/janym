@@ -19,12 +19,15 @@ const Product = async ({ params }) => {
       <div className={styles.content}>
         <div className={styles.title}>{product.title}</div>
         <div className={styles.description}>{product.description}</div>
-        <div className={styles.specification}>
-          <div>{product.material}</div>
-          <div>{product.color}</div>
-          <div>{product.size}</div>
+        <div className={styles.info}>
+          <div className={styles.specification}>
+            <div>Material: {product.material}</div>
+            <div>Supplier color: {product.color}</div>
+            <div>Size: {product.size}</div>
+          </div>
+          <div className={styles.price}>${product.price}</div>
         </div>
-        <div className={styles.price}>${product.price}</div>
+
         <div className={styles.bottom}>
           <div className={styles.caption}>
             Shipping: Worldwide shipping is free for orders of $ 350 and above. Delivery is carried out within 5-14 days

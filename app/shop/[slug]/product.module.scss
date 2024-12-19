@@ -5,7 +5,7 @@
 }
 
 .imageWrapper {
-  @apply h-[70vh];
+  @apply h-[50vh];
   @apply md:h-[calc(100vh_-_56px)];
   @apply overflow-hidden;
 }
@@ -18,25 +18,31 @@
 }
 
 .title, .description, .price {
-  @apply text-32px leading-32px;
+  @apply text-24px leading-30px;
   @apply md:text-58px md:leading-58px md:tracking-[-0.01em];
-  @apply [@media(max-height:950px)]:text-32px [@media(max-height:950px)]:leading-32px;
+  @apply [@media(max-height:950px)]:text-24px [@media(max-height:950px)]:leading-30px;
 }
 
 .price {
-  @apply my-32px;
   @apply md:my-auto;
 }
 
 .description {
-  @apply mt-54px;
+  @apply mt-32px md:mt-54px;
   @apply [@media(max-height:950px)]:mt-32px;
 }
 
+.info {
+  @apply flex flex-row-reverse items-start justify-between gap-8px;
+  @apply md:flex-col md:gap-0 md:h-100%;
+  @apply mt-42px;
+  @apply md:mt-60px;
+  @apply [@media(max-height:950px)]:mt-42px;
+}
+
 .specification {
-  @apply text-32px leading-34px;
-  @apply mt-60px;
-  @apply [@media(max-height:950px)]:mt-32px;
+  @apply text-18px leading-22px;
+  @apply md:text-32px md:leading-34px;
 }
 
 .bottom {
@@ -44,6 +50,7 @@
 }
 
 .caption {
+  @apply hidden md:block;
   @apply leading-23px;
 }
 
