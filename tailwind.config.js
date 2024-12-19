@@ -132,6 +132,7 @@ module.exports = {
       fontFamily: {
         "sf-pro": "var(--font-sf-pro)",
         "be-vietnam-pro": "var(--font-be-vietnam-pro)",
+        "general-sans": "var(--font-general-sans)"
       },
       fontSize: {
         ...sizes

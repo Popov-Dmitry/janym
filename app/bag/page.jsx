@@ -30,7 +30,10 @@ const Bag = () => {
   return (
     <div className={styles.container}>
       {cartDetails.map((item) => (
-        <div className={styles.block} key={item.slug}>
+        <div className={styles.section} key={item.slug}>
+          <div className={styles.removeMobile} onClick={() => removeItem(item.slug)}>
+            X
+          </div>
           <div className={styles.imageWrapper}>
             <img src={item.cover} alt={item.title} className={styles.image} />
           </div>
@@ -49,7 +52,7 @@ const Bag = () => {
           </div>
         </div>
       ))}
-      <div className={styles.block}>
+      <div className={styles.bottom}>
         <Checkbox text="By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order might be subject to local duties/taxes imposed by the country of destination (if applicable) that are my.full responsibility. " />
         <div className={styles.total}>
           Total: ${cartDetails.reduce((prev, curr) => prev + curr.price, 0)}
