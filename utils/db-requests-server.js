@@ -14,7 +14,7 @@ export const getPreviews = async () => {
 export const getProduct = async (slug) => {
   const supabase = await createSupabaseServerClient();
   const { data } = await supabase.from("products")
-    .select("title, description, material, color, size, price, images")
+    .select("title, description, material, color, size, price, media")
     .eq("slug", slug);
 
   return data[0];

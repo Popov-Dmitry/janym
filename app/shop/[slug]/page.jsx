@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./product.module.scss";
-import PhotoSlider from "@/components/photo-slider/PhotoSlider";
+import MediaSlider from "@/components/media-slider/MediaSlider";
 import AddToBagButton from "@/clientSections/shop/product/AddToBagButton";
 import { getProduct } from "@/utils/db-requests-server";
 import { redirect } from "next/navigation";
@@ -15,7 +15,7 @@ const Product = async ({ params }) => {
 
   return (
     <div className={styles.container}>
-      <PhotoSlider photos={product.images} className={styles.imageWrapper} />
+      <MediaSlider media={product.media} className={styles.imageWrapper} />
       <div className={styles.content}>
         <div className={styles.title}>{product.title}</div>
         <div className={styles.description}>{product.description}</div>

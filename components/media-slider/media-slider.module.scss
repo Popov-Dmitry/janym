@@ -1,4 +1,4 @@
-.photoSlider {
+.mediaSlider {
   @apply flex flex-col;
   @apply overflow-y-scroll;
   @apply overflow-x-hidden;
@@ -6,19 +6,19 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 
-  .photoWrapper {
+  .mediaWrapper {
     @apply min-h-100% min-w-100%;
     @apply flex items-center justify-center;
     @apply cursor-pointer;
   }
 
-  .photo {
+  .media {
     @apply object-cover;
     @apply max-h-[100%] min-w-100%;
   }
 }
 
-.photoSlider::-webkit-scrollbar {
+.mediaSlider::-webkit-scrollbar {
   display: none;
 }
 
@@ -36,6 +36,6 @@
   scrollbar-width: none;
 }
 
-.fullViewPhoto {
+.fullViewMedia {
   @apply md:h-[calc(100vh_-_56px)];
 }

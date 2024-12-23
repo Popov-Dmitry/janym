@@ -1,10 +1,10 @@
 "use client";
 
-import styles from "./photo-slider.module.scss";
+import styles from "./media-slider.module.scss";
 import React, { useEffect, useRef, useState } from "react";
 import { joinClassNames } from "@/utils/join-class-names";
 
-const PhotoSlider = ({ photos, className }) => {
+const MediaSlider = ({ media, className }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFullView, setIsFullView] = useState(false);
   const ref = useRef(null);
@@ -35,22 +35,35 @@ const PhotoSlider = ({ photos, className }) => {
   return (
     <>
       <div
-        className={joinClassNames(isFullView ? styles.fullView : styles.photoSlider, className)}
+        className={joinClassNames(isFullView ? styles.fullView : styles.mediaSlider, className)}
         onWheel={handleWheel}
         onScroll={handleScroll}
         ref={ref}
       >
-        {photos.map((photo) => (
+        {media?.map((item) => (
           <div
-            className={isFullView ? undefined : styles.photoWrapper}
-            key={photo}
+            className={isFullView ? undefined : styles.mediaWrapper}
+            key={item.source}
             onClick={() => setIsFullView((prevState) => !prevState)}
           >
-            <img
-              src={photo}
-              alt={""}
-              className={isFullView ? styles.fullViewPhoto : styles.photo}
-            />
+            {item.type === "image" ? (
+              <img
+                src={item.source}
+                alt={""}
+                className={isFullView ? styles.fullViewMedia : styles.media}
+              />
+            ) : (
+              <video
+                width="100%"
+                controls
+                autoPlay
+                muted
+                loop
+                className={isFullView ? styles.fullViewMedia : styles.media}
+              >
+                <source src={item.source} type="video/mp4" />
+              </video>
+            )}
           </div>
         ))}
       </div>
@@ -58,4 +71,4 @@ const PhotoSlider = ({ photos, className }) => {
   );
 };
 
-export default PhotoSlider;
+export default MediaSlider;
