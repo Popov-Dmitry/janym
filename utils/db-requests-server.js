@@ -5,7 +5,8 @@ import { createSupabaseServerClient } from "@/utils/supabase-server-client";
 export const getPreviews = async () => {
   const supabase = await createSupabaseServerClient();
   const { data } = await supabase.from("products")
-    .select("slug, cover, title, price");
+    .select("slug, cover, title, price")
+    .eq("show_on_home", true);
 
   return data;
 }
