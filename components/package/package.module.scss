@@ -1,0 +1,59 @@
+.mobile {
+  @apply md:hidden;
+}
+
+.desktop {
+  @apply hidden md:block;
+}
+
+.packageRed {
+  filter: hue-rotate(290deg);
+}
+
+.packageGreen {
+  filter: hue-rotate(80deg);
+}
+
+.packageGrid {
+  @apply grid grid-cols-5 gap-32px;
+}
+
+.packageLastCol {
+  @apply ml-[-40px];
+}
+
+.packageTags {
+  @apply absolute top-0 bottom-0;
+}
+
+.packageImages {
+  @apply mt-14px relative;
+}
+
+.packageImage {
+  @apply h-100% w-50%;
+  @apply cursor-pointer;
+  @apply duration-150;
+}
+
+.packageImage:hover {
+  @apply scale-110;
+}
+
+.packageMobileGrid {
+  @apply grid grid-cols-2 gap-8px;
+  @apply mt-20px;
+
+  .packageMobileGridLeft {
+    @apply flex flex-col justify-between;
+    @apply my-36px;
+  }
+
+  .packageMobileImage {
+    @apply relative;
+  }
+
+  .packageMobileTag {
+    @apply absolute bottom-[36px];
+  }
+}

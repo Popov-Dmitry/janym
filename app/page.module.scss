@@ -155,33 +155,3 @@
 .packageLastCol {
   @apply ml-[-40px];
 }
-
-.packageTags {
-  @apply absolute top-0 bottom-0;
-}
-
-.packageImages {
-  @apply mt-14px relative;
-}
-
-.packageImage {
-  @apply h-100% w-50%;
-}
-
-.packageMobileGrid {
-  @apply grid grid-cols-2 gap-8px;
-  @apply mt-20px;
-
-  .packageMobileGridLeft {
-    @apply flex flex-col justify-between;
-    @apply my-36px;
-  }
-
-  .packageMobileImage {
-    @apply relative;
-  }
-
-  .packageMobileTag {
-    @apply absolute bottom-[36px];
-  }
-}

@@ -3,6 +3,7 @@ import ProductPreview from "@/components/product-preview/ProductPreview";
 import Image from "next/image";
 import { joinClassNames } from "@/utils/join-class-names";
 import { getPreviews } from "@/utils/db-requests-server";
+import Package from "@/components/package/Package";
 
 export default async function Home() {
   const products = await getPreviews();
@@ -181,32 +182,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.desktop}>
-          <div className={styles.packageImages}>
-            <div className={joinClassNames(styles.packageGrid)}>
-              <img src="/package.png" className={"col-span-3"} />
-            </div>
-            <div className={joinClassNames(styles.packageTags, styles.packageGrid)}>
-              <div className={"col-span-2"} />
-              <img src="/pants.png" className={styles.packageImage} />
-              <img src="/knitwear.png" className={styles.packageImage} />
-              <img src="/shirt.png" className={joinClassNames(styles.packageImage, styles.packageLastCol)} />
-            </div>
-          </div>
-        </div>
-        <div className={styles.mobile}>
-          <div className={styles.packageMobileGrid}>
-            <div className={styles.packageMobileGridLeft}>
-              <img src="/pants-horizontal.png" />
-              <img src="/skirt-horizontal.png" />
-              <img src="/pants-m-horizontal.png" />
-            </div>
-            <div className={styles.packageMobileImage}>
-              <img src="/package-vertical.png" />
-              <img src="/pants-m-horizontal.png" className={styles.packageMobileTag} />
-            </div>
-          </div>
-        </div>
+        <Package />
       </div>
     </div>
   );
