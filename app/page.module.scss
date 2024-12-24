@@ -115,7 +115,10 @@
   @apply md:text-58px md:leading-58px md:tracking-[0.02em];
 }
 
+
 .heroImage {
+  @apply relative;
+  @apply w-100% h-[500px];
   @apply mt-80px;
   @apply md:mt-100px;
 }

@@ -21,7 +21,9 @@ export default async function Home() {
             <div>FW’24</div>
           </div>
         </div>
-        <img src="/aral-sea-collection.png" alt="" className={styles.heroImage} />
+        <div className={styles.heroImage}>
+          <Image src="/aral-sea-collection.png" alt="" fill />
+        </div>
         <div className={styles.heroBottom}>
           <div className={styles.heroBottomCaption}>
             <div>FW’</div>
@@ -47,7 +49,7 @@ export default async function Home() {
       <div className={styles.block} id="shop">
         <div className={styles.blockTitle}>Autumn-Winter 25</div>
         <div className={styles.products}>
-          {products.map((product) => (
+          {products?.map((product) => (
             <ProductPreview key={product.title} {...product} />
           ))}
         </div>
