@@ -16,6 +16,11 @@
     @apply object-cover;
     @apply max-h-[100%] min-w-100%;
   }
+
+  video {
+    @apply object-fill;
+    @apply h-100%;
+  }
 }
 
 .mediaSlider::-webkit-scrollbar {

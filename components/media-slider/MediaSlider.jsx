@@ -49,13 +49,11 @@ const MediaSlider = ({ media, className }) => {
             {item.type === "image" ? (
               <img
                 src={item.source}
-                alt={""}
+                alt=""
                 className={isFullView ? styles.fullViewMedia : styles.media}
               />
             ) : (
               <video
-                width="100%"
-                controls
                 autoPlay
                 muted
                 loop
