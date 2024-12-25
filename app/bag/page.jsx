@@ -7,6 +7,7 @@ import { joinClassNames } from "@/utils/join-class-names";
 import Checkbox from "@/components/checkbox/Checkbox";
 import Button from "@/components/button/Button";
 import { getProductsFromCart } from "@/utils/db-requests-client";
+import Link from "next/link";
 
 const Bag = () => {
   const { cart, removeItem } = useCart();
@@ -34,14 +35,14 @@ const Bag = () => {
           <div className={styles.removeMobile} onClick={() => removeItem(item.slug)}>
             X
           </div>
-          <div className={styles.imageWrapper}>
+          <Link href={`/shop/${item.slug}`} className={styles.imageWrapper}>
             <img src={item.cover} alt={item.title} className={styles.image} />
-          </div>
+          </Link>
           <div className={styles.details}>
-            <div className={styles.top}>
+            <Link href={`/shop/${item.slug}`} className={styles.top}>
               <div>{item.title}</div>
               <div>${item.price}</div>
-            </div>
+            </Link>
             <div className={styles.specification}>
               <div>Size: {item.size}</div>
               <div>Material: {item.material}</div>

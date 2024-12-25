@@ -17,6 +17,7 @@
   .imageWrapper {
     @apply max-h-[230px];
     @apply flex items-center justify-center;
+    @apply cursor-pointer;
   }
 
   .image {
@@ -31,6 +32,7 @@
     @apply text-24px leading-30px;
     @apply md:text-58px md:leading-58px md:tracking-[-0.01em];
     @apply flex justify-between items-center gap-8px;
+    @apply cursor-pointer;
   }
 
   .specification {
