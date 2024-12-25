@@ -57,6 +57,7 @@ const MediaSlider = ({ media, className }) => {
                 autoPlay
                 muted
                 loop
+                playsInline
                 className={isFullView ? styles.fullViewMedia : styles.media}
               >
                 <source src={item.source} type="video/mp4" />
