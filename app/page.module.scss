@@ -64,7 +64,8 @@
     @apply mt-22px;
     @apply md:mt-0;
     @apply text-22px leading-26px;
-    @apply md:text-58px md:leading-58px md:tracking-[0.01em];
+    @apply md:text-42px md:leading-42px md:tracking-[0.01em];
+    @apply 2xl:text-58px 2xl:leading-58px;
   }
 
   .leftColBottomTexts {
@@ -74,12 +75,14 @@
 
   .leftColCaption {
     @apply text-16px leading-17px;
-    @apply md:font-semibold md:leading-auto;
+    @apply md:font-semibold md:text-14px md:leading-14px;
+    @apply 2xl:text-16px;
   }
 
   .leftColBottomText {
     @apply text-16px leading-17px;
-    @apply md:text-32px md:leading-34px;
+    @apply md:text-24px md:leading-24px;
+    @apply 2xl:text-32px 2xl:leading-34px;
   }
 }
 
