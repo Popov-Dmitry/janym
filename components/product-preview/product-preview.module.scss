@@ -7,7 +7,8 @@
   }
 
   .imageWrapper {
-    @apply h-500px;
+    @apply aspect-[4/3] max-h-300px;
+    @apply my-100px md:my-0;
     @apply flex items-center justify-center;
   }
 
@@ -20,12 +21,15 @@
     @apply md:text-32px md:leading-34px md:tracking-normal;
     @apply flex flex-col items-center;
     @apply md:gap-32px;
-    @apply mt-20px;
-    @apply md:mt-40px;
+    @apply mt-20px md:mt-40px min-[1200px]:mt-100px;
   }
 
-  .divider {
+  .divider, .dividerMobile {
     @apply w-100%;
     @apply border border-black;
+  }
+
+  .dividerMobile {
+    @apply block md:hidden;
   }
 }

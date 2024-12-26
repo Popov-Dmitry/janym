@@ -17,6 +17,7 @@ const ProductPreview = ({ slug, cover, title, price }) => {
       </Link>
       <div className={styles.divider} />
       <AddToBagButton productId={slug} />
+      <div className={styles.dividerMobile} />
     </div>
   );
 };
