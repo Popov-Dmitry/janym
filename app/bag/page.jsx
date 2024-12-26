@@ -31,32 +31,59 @@ const Bag = () => {
   return (
     <div className={styles.container}>
       {cartDetails.map((item) => (
-        <div className={styles.section} key={item.slug}>
-          <div className={styles.removeMobile} onClick={() => removeItem(item.slug)}>
-            X
-          </div>
-          <Link href={`/shop/${item.slug}`} className={styles.imageWrapper}>
-            <img src={item.cover} alt={item.title} className={styles.image} />
-          </Link>
-          <div className={styles.details}>
-            <Link href={`/shop/${item.slug}`} className={styles.top}>
+        <React.Fragment key={item.id}>
+          <Link href={`/shop/${item.slug}`} className={styles.mobile}>
+            <div className={styles.top}>
               <div>{item.title}</div>
-              <div>${item.price}</div>
-            </Link>
-            <div className={styles.specification}>
-              <div>Size: {item.size}</div>
-              <div>Material: {item.material}</div>
+              <div className={styles.removeMobile} onClick={() => removeItem(item.slug)}>
+                X
+              </div>
             </div>
-            <div className={styles.remove} onClick={() => removeItem(item.slug)}>
-              Remove
+            <div className={styles.section}>
+              <div className={styles.leftColMobile}>
+                <div className={styles.specification}>
+                  <div>Size: {item.size}</div>
+                  <div>Material: {item.material}</div>
+                </div>
+                <div className={styles.priceMobile}>${item.price}</div>
+              </div>
+              <div className={styles.imageWrapper}>
+                <img src={item.cover} alt={item.title} className={styles.image} />
+              </div>
+            </div>
+          </Link>
+          <div className={styles.desktop}>
+            <div className={styles.section}>
+              <Link href={`/shop/${item.slug}`} className={styles.imageWrapper}>
+                <img src={item.cover} alt={item.title} className={styles.image} />
+              </Link>
+              <div className={styles.details}>
+                <Link href={`/shop/${item.slug}`} className={styles.top}>
+                  <div>{item.title}</div>
+                  <div>${item.price}</div>
+                </Link>
+                <div className={styles.specification}>
+                  <div>Size: {item.size}</div>
+                  <div>Material: {item.material}</div>
+                </div>
+                <div className={styles.remove} onClick={() => removeItem(item.slug)}>
+                  Remove
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </React.Fragment>
       ))}
       <div className={styles.bottom}>
-        <Checkbox text="By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order might be subject to local duties/taxes imposed by the country of destination (if applicable) that are my.full responsibility. " />
+        <Checkbox
+          text="By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order might be subject to local duties/taxes imposed by the country of destination (if applicable) that are my.full responsibility. " />
         <div className={styles.total}>
-          Total: ${cartDetails.reduce((prev, curr) => prev + curr.price, 0)}
+          <span className={styles.desktop}>
+            Total: ${cartDetails.reduce((prev, curr) => prev + curr.price, 0)}
+          </span>
+          <span className={styles.mobile}>
+            ${cartDetails.reduce((prev, curr) => prev + curr.price, 0)} (Total)
+          </span>
         </div>
       </div>
       <Button text="Check Out" font="sfPro" />
