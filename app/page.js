@@ -133,7 +133,7 @@ export default async function Home() {
           </div>
           <div className={styles.desktop}>
             <div className={styles.caption}>AW</div>
-            <div className={joinClassNames(styles.blockTitle, "mt-14px")}>
+            <div className={joinClassNames(styles.packageColCaption, "mt-14px")}>
               <div>Saturday</div>
               <div>October 21st</div>
               <div>from 8pm until 1am</div>
@@ -141,7 +141,7 @@ export default async function Home() {
           </div>
           <div className={styles.desktop}>
             <div className={styles.caption}>Autumn Winter</div>
-            <div className={joinClassNames(styles.blockTitle, "mt-14px")}>
+            <div className={joinClassNames(styles.packageColCaption, "mt-14px")}>
               <div>Bene Bene</div>
               <div>Via Giovanni Battista</div>
               <div>20129</div>
@@ -155,12 +155,12 @@ export default async function Home() {
         </div>
         <div className={styles.desktop}>
           <div className={joinClassNames(styles.packageGrid, "mt-117px")}>
-            <div className={joinClassNames(styles.blockTitle, "col-span-2")}>
+            <div className={joinClassNames(styles.packageColCaption, "col-span-2")}>
               One package without paint for different garments
             </div>
-            <div className={styles.blockTitle}>1</div>
-            <div className={styles.blockTitle}>2</div>
-            <div className={joinClassNames(styles.blockTitle, styles.packageLastCol)}>3</div>
+            <div className={styles.packageColCaption}>1</div>
+            <div className={styles.packageColCaption}>2</div>
+            <div className={joinClassNames(styles.packageColCaption, styles.packageLastCol)}>3</div>
           </div>
         </div>
         <div className={joinClassNames(styles.blockTitle, styles.mobile, "mt-16px")}>

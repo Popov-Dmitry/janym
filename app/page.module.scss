@@ -65,7 +65,7 @@
     @apply md:mt-0;
     @apply text-22px leading-26px;
     @apply md:text-42px md:leading-42px md:tracking-[0.01em];
-    @apply 2xl:text-58px 2xl:leading-58px;
+    @apply 2xl:text-56px 2xl:leading-56px;
   }
 
   .leftColBottomTexts {
@@ -82,7 +82,8 @@
   .leftColBottomText {
     @apply text-16px leading-17px;
     @apply md:text-24px md:leading-24px;
-    @apply 2xl:text-32px 2xl:leading-34px;
+    @apply 2xl:text-28px 2xl:leading-28px;
+    @apply min-[1800px]:text-32px min-[1800px]:leading-32px;
   }
 }
 
@@ -121,9 +122,9 @@
 
 .heroImage {
   @apply relative;
-  @apply w-100% md:h-[500px];
+  @apply w-100% md:h-[400px] 2xl:h-[500px];
   @apply mt-80px;
-  @apply md:mt-100px;
+  @apply md:mt-40px;
 }
 
 .heroBottom {
@@ -140,7 +141,8 @@
 .heroBottomText {
   @apply text-28px leading-28px;
   @apply mt-24px;
-  @apply md:text-58px md:leading-60px;
+  @apply md:text-42px md:leading-48px;
+  @apply 2xl:text-58px 2xl:leading-60px;
   @apply md:mt-0;
 }
 
@@ -152,6 +154,12 @@
 .ecological {
   @include blockFullHeight;
   @apply pb-0 pr-0;
+}
+
+.packageColCaption {
+  @apply font-semibold text-16px leading-16px tracking-wider;
+  @apply md:font-medium md:text-22px md:leading-22px;
+  @apply 2xl:text-32px 2xl:leading-34px;
 }
 
 .packageGrid {
