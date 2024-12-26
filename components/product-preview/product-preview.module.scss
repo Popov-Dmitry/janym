@@ -7,7 +7,7 @@
   }
 
   .imageWrapper {
-    @apply aspect-[4/3] max-h-300px;
+    @apply aspect-[4/3] max-h-300px min-[1500px]:max-h-350px;
     @apply my-100px md:my-0;
     @apply flex items-center justify-center;
   }
