@@ -15,3 +15,7 @@ body {
   font-family: var(--font-sf-pro);
   font-weight: 500;
 }
+
+* {
+  -webkit-font-smoothing: none;
+}
