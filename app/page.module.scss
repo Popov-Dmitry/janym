@@ -118,7 +118,7 @@
 
 .heroImage {
   @apply relative;
-  @apply w-100% h-[500px];
+  @apply w-100% md:h-[500px];
   @apply mt-80px;
   @apply md:mt-100px;
 }
