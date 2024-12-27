@@ -89,33 +89,36 @@ export default async function Home() {
 
       <div>
         <div className={styles.ecological} id="ecological">
-          <div className={styles.blockTitle}>Approach to garment Creation</div>
           <div className={styles.twoCols}>
-            <div className={styles.leftCol}>
-              <div className={joinClassNames(styles.leftColCaption, styles.desktop)}>
-                Fashion
-              </div>
-              <div className={joinClassNames(styles.leftColDescription, "mt-16px")}>
-                By focusing on recycled,
-                renewable materials, clean electricity, and low-carbon shipping
-              </div>
-              <div className={joinClassNames(styles.leftColBottom, "pb-40px")}>
-                <div className={styles.leftColBottomTexts}>
-                  <div className={styles.leftColCaption}>Values</div>
-                  <div className={styles.leftColBottomText}>
-                    <div>Cultural heritage</div>
-                    <div>Environmental friendliness</div>
-                  </div>
+            <div className={styles.ecologicalLeftColWrapper}>
+              <div className={styles.blockTitle}>Approach to garment Creation</div>
+              <div className={styles.leftCol}>
+                <div className={joinClassNames(styles.leftColCaption, styles.desktop)}>
+                  Fashion
                 </div>
-                <div className={styles.leftColBottomTexts}>
-                  <div className={styles.leftColCaption}>Philosophy</div>
-                  <div className={styles.leftColBottomText}>
-                    <div>Harmony with nature, culture</div>
-                    <div>Connecting the past and the future</div>
+                <div className={joinClassNames(styles.leftColDescription, "mt-16px")}>
+                  By focusing on recycled,
+                  renewable materials, clean electricity, and low-carbon shipping
+                </div>
+                <div className={joinClassNames(styles.leftColBottom, "pb-40px")}>
+                  <div className={styles.leftColBottomTexts}>
+                    <div className={styles.leftColCaption}>Values</div>
+                    <div className={styles.leftColBottomText}>
+                      <div>Cultural heritage</div>
+                      <div>Environmental friendliness</div>
+                    </div>
+                  </div>
+                  <div className={styles.leftColBottomTexts}>
+                    <div className={styles.leftColCaption}>Philosophy</div>
+                    <div className={styles.leftColBottomText}>
+                      <div>Harmony with nature, culture</div>
+                      <div>Connecting the past and the future</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className={joinClassNames(styles.colImage, styles.desktop)}>
               <Image src="/optimizer.png" alt="" fill />
             </div>

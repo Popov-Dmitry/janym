@@ -153,7 +153,12 @@
 
 .ecological {
   @include blockFullHeight;
-  @apply pb-0 pr-0;
+  @apply py-0 pr-0;
+
+  .ecologicalLeftColWrapper {
+    @apply flex flex-col;
+    @apply md:pt-40px;
+  }
 }
 
 .packageColCaption {
