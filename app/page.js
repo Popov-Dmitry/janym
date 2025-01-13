@@ -44,6 +44,7 @@ export default async function Home() {
           </div>
         </div>
         <img src="/hero-mobile.png" alt="" className={styles.heroImage} />
+        <div className={styles.black} />
       </div>
 
       <div className={styles.block} id="shop">
