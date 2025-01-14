@@ -94,6 +94,7 @@
 .heroWrapperMobile {
   @apply h-[calc(100vh_-_56px_-_40px)];
   @apply flex flex-col;
+  @apply overflow-hidden;
   @apply md:hidden;
 }
 
