@@ -7,7 +7,9 @@
   }
 
   .imageWrapper {
-    @apply aspect-[4/3] h-300px min-[1500px]:h-350px;
+    @apply aspect-[4/3] h-256px;
+    @apply lg:h-300px;
+    @apply min-[1500px]:h-350px;
     @apply my-100px md:my-0;
     @apply flex items-center justify-center;
   }
@@ -18,10 +20,11 @@
 
   .text {
     @apply text-16px leading-26px tracking-wider;
-    @apply md:text-32px md:leading-34px md:tracking-normal;
+    @apply md:text-24px md:leading-24px md:tracking-normal;
+    @apply lg:text-32px lg:leading-34px;
     @apply flex flex-col items-center;
     @apply md:gap-32px;
-    @apply mt-20px md:mt-40px min-[1200px]:mt-100px;
+    @apply mt-20px md:mt-40px lg:mt-100px;
   }
 
   .divider, .dividerMobile {

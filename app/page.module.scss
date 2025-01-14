@@ -39,11 +39,14 @@
 
 .blockTitle {
   @apply font-semibold text-16px leading-16px tracking-wider;
-  @apply md:font-medium md:text-32px md:leading-34px;
+  @apply md:font-medium md:text-24px md:leading-24px;
+  @apply md:font-medium lg:text-32px lg:leading-34px;
 }
 
 .caption {
   @apply font-semibold;
+  @apply text-14px;
+  @apply lg:text-16px;
 }
 
 .colImage {
@@ -64,7 +67,9 @@
     @apply mt-22px;
     @apply md:mt-0;
     @apply text-22px leading-26px;
-    @apply md:text-42px md:leading-42px md:tracking-[0.01em];
+    @apply md:text-24px md:leading-24px md:tracking-[0.01em];
+    @apply lg:text-32px lg:leading-32px;
+    @apply xl:text-42px xl:leading-42px;
     @apply 2xl:text-56px 2xl:leading-56px;
   }
 
@@ -81,7 +86,9 @@
 
   .leftColBottomText {
     @apply text-16px leading-17px;
-    @apply md:text-24px md:leading-24px;
+    @apply md:text-18px md:leading-18px;
+    @apply lg:text-20px md:leading-20px;
+    @apply xl:text-22px xl:leading-22px;
     @apply 2xl:text-28px 2xl:leading-28px;
     @apply min-[1800px]:text-32px min-[1800px]:leading-32px;
   }
@@ -109,23 +116,30 @@
 
   .heroTitleWrapper {
     @apply col-span-7;
-    @apply flex gap-73px;
+    @apply flex gap-42px;
+    @apply 2xl:gap-73px;
   }
 
   .heroSubtitle {
-    @apply text-58px leading-58px tracking-[-0.01em];
+    @apply text-28px leading-28px tracking-[-0.01em];
+    @apply lg:text-42px lg:leading-42px;
+    @apply xl:text-52px xl:leading-58px;
+    @apply 2xl:text-58px 2xl:leading-58px;
   }
 
   .heroCaption {
+    @apply col-span-5;
     @apply font-semibold;
   }
 }
 
 .heroTitle {
   @apply text-16px leading-16px tracking-wider;
-  @apply md:text-58px md:leading-58px md:tracking-[0.02em];
+  @apply md:text-28px md:leading-28px md:tracking-[0.02em];
+  @apply lg:text-42px lg:leading-42px;
+  @apply xl:text-52px xl:leading-58px;
+  @apply 2xl:text-58px 2xl:leading-58px;
 }
-
 
 .heroImage {
   @apply relative;
@@ -136,8 +150,11 @@
 
 .heroBottom {
   @include block;
-  @apply pr-300px py-0 mt-14px;
   @apply flex-col gap-12px;
+  @apply pr-40px py-0 mt-14px;
+  @apply md:pr-80px;
+  @apply lg:pr-120px;
+  @apply xl:pr-300px;
 
   .heroBottomCaption {
     @apply flex gap-30px;
@@ -148,9 +165,12 @@
 .heroBottomText {
   @apply text-28px leading-28px;
   @apply mt-24px;
-  @apply md:text-42px md:leading-48px;
+  @apply md:text-28px md:leading-28px;
+  @apply lg:text-42px lg:leading-42px;
+  @apply xl:text-52px xl:leading-58px;
   @apply 2xl:text-58px 2xl:leading-60px;
-  @apply md:mt-0;
+  @apply md:mt-12px;
+  @apply xl:mt-0;
 }
 
 .products {
@@ -170,7 +190,8 @@
 
 .packageColCaption {
   @apply font-semibold text-16px leading-16px tracking-wider;
-  @apply md:font-medium md:text-22px md:leading-22px;
+  @apply md:font-medium;
+  @apply lg:text-18px lg:leading-22px;
   @apply 2xl:text-32px 2xl:leading-34px;
 }
 
