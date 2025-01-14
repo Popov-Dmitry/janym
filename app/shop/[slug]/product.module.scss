@@ -19,7 +19,8 @@
 
 .title, .description, .price {
   @apply text-24px leading-30px;
-  @apply md:text-58px md:leading-58px md:tracking-[-0.01em];
+  @apply md:text-28px md:leading-32px md:tracking-[-0.01em];
+  @apply 2xl:text-58px 2xl:leading-58px;
   @apply [@media(max-height:950px)]:text-24px [@media(max-height:950px)]:leading-30px;
 }
 
@@ -29,7 +30,7 @@
 
 .description {
   @apply mt-32px md:mt-54px;
-  @apply [@media(max-height:950px)]:mt-32px;
+  @apply [@media(max-height:950px)]:mt-22px;
 }
 
 .info {
@@ -37,12 +38,15 @@
   @apply md:flex-col md:gap-0 md:h-100%;
   @apply mt-42px;
   @apply md:mt-60px;
-  @apply [@media(max-height:950px)]:mt-42px;
+  @apply [@media(max-height:950px)]:mt-22px;
 }
 
 .specification {
   @apply text-18px leading-22px;
-  @apply md:text-32px md:leading-34px;
+  @apply md:text-22px md:leading-24px;
+  @apply lg:text-26px md:leading-28px;
+  @apply xl:text-28px xl:leading-30px;
+  @apply 2xl:text-32px 2xl:leading-34px;
 }
 
 .bottom {
@@ -52,6 +56,8 @@
 .caption {
   @apply hidden md:block;
   @apply leading-23px;
+  @apply text-14px;
+  @apply lg:text-16px;
 }
 
 .divider {
