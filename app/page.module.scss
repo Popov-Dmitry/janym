@@ -7,6 +7,7 @@
 @mixin blockFullHeight {
   @include block;
   @apply md:h-100vh;
+  @apply [@media(max-height:420px)]:h-auto;
   @apply flex flex-col;
 }
 
@@ -56,6 +57,7 @@
 
 .leftCol {
   @apply mt-auto;
+  @apply [@media(max-height:420px)]:mt-32px;
 
   .leftColBottom {
     @apply mt-70px;
