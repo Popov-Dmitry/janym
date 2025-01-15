@@ -55,6 +55,15 @@
   @apply md:aspect-auto;
 }
 
+.aboutImageWrapper {
+  @apply md:h-100%;
+  @apply md:flex md:items-center md:justify-center;
+}
+
+.aboutImage {
+  @apply relative w-100% aspect-square;
+}
+
 .leftCol {
   @apply mt-auto;
   @apply [@media(max-height:420px)]:mt-32px;

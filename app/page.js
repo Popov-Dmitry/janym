@@ -82,8 +82,10 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className={styles.colImage}>
-            <Image src="/about.png" alt="" fill />
+          <div className={styles.aboutImageWrapper}>
+            <div className={styles.aboutImage}>
+              <Image src="/about.png" alt="" fill />
+            </div>
           </div>
         </div>
       </div>
