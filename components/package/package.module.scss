@@ -42,7 +42,8 @@
 
 .packageMobileGrid {
   @apply grid grid-cols-2 gap-8px;
-  @apply mt-20px;
+  @apply mt-10px;
+  @apply py-44px;
 
   .packageMobileGridLeft {
     @apply flex flex-col justify-between;

@@ -20,14 +20,15 @@
 }
 
 .twoCols {
+  @apply py-10px md:py-0;
   @apply md:grid md:grid-cols-2;
   @apply h-100%;
 }
 
 .container {
-  @apply flex flex-col justify-center items-center gap-88px;
+  @apply flex flex-col justify-center items-center gap-40px;
   @apply md:gap-100px;
-  @apply py-40px;
+  @apply pt-38px pb-10px;
 }
 
 .block {
@@ -39,9 +40,10 @@
 }
 
 .blockTitle {
-  @apply font-semibold text-16px leading-16px tracking-wider;
+  @apply font-semibold text-18px leading-18px tracking-wider font-general-sans;
   @apply md:font-medium md:text-24px md:leading-24px;
   @apply md:font-medium lg:text-32px lg:leading-34px;
+  @apply mb-10px;
 }
 
 .caption {
@@ -56,6 +58,7 @@
 }
 
 .aboutImageWrapper {
+  @apply mt-10px;
   @apply md:h-100%;
   @apply md:flex md:items-center md:justify-center;
 }
@@ -69,15 +72,15 @@
   @apply [@media(max-height:420px)]:mt-32px;
 
   .leftColBottom {
-    @apply mt-70px;
+    @apply mt-80px;
     @apply md:mt-110px;
-    @apply grid grid-cols-2;
+    @apply grid grid-cols-2 gap-x-10px;
   }
 
   .leftColDescription {
-    @apply mt-22px;
-    @apply md:mt-0;
-    @apply text-22px leading-26px;
+    //@apply mt-22px;
+    //@apply md:mt-0;
+    @apply text-26px leading-31px font-general-sans;
     @apply md:text-24px md:leading-24px md:tracking-[0.01em];
     @apply lg:text-32px lg:leading-32px;
     @apply xl:text-42px xl:leading-42px;
@@ -85,19 +88,19 @@
   }
 
   .leftColBottomTexts {
-    @apply flex flex-col gap-16px;
+    @apply flex flex-col gap-20px;
     @apply md:gap-14px;
   }
 
   .leftColCaption {
-    @apply text-16px leading-17px;
+    @apply text-18px leading-22px font-general-sans;
     @apply md:font-semibold md:text-14px md:leading-14px;
     @apply 2xl:text-16px;
   }
 
   .leftColBottomText {
-    @apply text-16px leading-17px;
-    @apply md:text-18px md:leading-18px;
+    @apply text-18px leading-22px font-general-sans;
+    @apply md:text-18px md:leading-22px;
     @apply lg:text-20px md:leading-20px;
     @apply xl:text-22px xl:leading-22px;
     @apply 2xl:text-28px 2xl:leading-28px;
@@ -145,17 +148,18 @@
 }
 
 .heroTitle {
-  @apply text-16px leading-16px tracking-wider;
-  @apply md:text-28px md:leading-28px md:tracking-[0.02em];
-  @apply lg:text-42px lg:leading-42px;
-  @apply xl:text-52px xl:leading-58px;
-  @apply 2xl:text-58px 2xl:leading-58px;
+  @apply text-18px leading-18px tracking-wider font-general-sans;
+  @apply md:hidden;
+  //@apply md:text-28px md:leading-28px md:tracking-[0.02em] ;
+  //@apply lg:text-42px lg:leading-42px;
+  //@apply xl:text-52px xl:leading-58px;
+  //@apply 2xl:text-58px 2xl:leading-58px;
 }
 
 .heroImage {
   @apply relative;
   @apply w-100% md:h-[400px] 2xl:h-[500px];
-  @apply mt-80px;
+  @apply mt-140px;
   @apply md:mt-40px;
 }
 
@@ -174,9 +178,9 @@
 }
 
 .heroBottomText {
-  @apply text-28px leading-28px;
-  @apply mt-24px;
-  @apply md:text-28px md:leading-28px;
+  @apply text-24px leading-29px font-general-sans;
+  @apply mt-8px;
+  @apply md:text-28px md:leading-28px md:font-sf-pro;
   @apply lg:text-42px lg:leading-42px;
   @apply xl:text-52px xl:leading-58px;
   @apply 2xl:text-58px 2xl:leading-60px;
@@ -185,8 +189,9 @@
 }
 
 .products {
-  @apply grid grid-cols-1 gap-4px;
+  @apply grid grid-cols-1 gap-10px;
   @apply md:grid-cols-2 md:gap-20px;
+  @apply mt-10px;
 }
 
 .ecological {
@@ -195,6 +200,7 @@
 
   .ecologicalLeftColWrapper {
     @apply flex flex-col;
+    @apply pr-10px;
     @apply md:pt-40px;
   }
 }

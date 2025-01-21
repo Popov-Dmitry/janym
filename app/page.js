@@ -48,7 +48,8 @@ export default async function Home() {
       </div>
 
       <div className={styles.block} id="shop">
-        <div className={styles.blockTitle}>Autumn-Winter 25</div>
+        <div className={joinClassNames(styles.blockTitle, styles.mobile)}>Collection</div>
+        <div className={joinClassNames(styles.blockTitle, styles.desktop)}>Spring-Summer 25</div>
         <div className={styles.products}>
           {products?.map((product) => (
             <ProductPreview key={product.title} {...product} />
@@ -61,23 +62,21 @@ export default async function Home() {
         <div className={styles.twoCols}>
           <div className={styles.leftCol}>
             <div className={styles.leftColDescription}>
-              Ethnicity, avant-garde, romanticism,
-              irony, deconstructivism,
-              craftsmanship, environmentalism
+              The brand takes traditional Kazakh garments and ornaments as a basis and deconstructs them, preserving the cultural code.
             </div>
             <div className={styles.leftColBottom}>
               <div className={styles.leftColBottomTexts}>
                 <div className={styles.leftColCaption}>Values</div>
                 <div className={styles.leftColBottomText}>
-                  <div>Cultural heritage</div>
-                  <div>Environmental friendliness</div>
+                  <div>CConservation of culture and nature</div>
+                  <div>Supporting local artisans</div>
+                  <div>Adaptability and practicality</div>
                 </div>
               </div>
               <div className={styles.leftColBottomTexts}>
                 <div className={styles.leftColCaption}>Philosophy</div>
                 <div className={styles.leftColBottomText}>
-                  <div>Harmony with nature, culture</div>
-                  <div>Connecting the past and the future</div>
+                  <div>We preserve traditions, because they give us the strength and wisdom to build the future.</div>
                 </div>
               </div>
             </div>
@@ -99,9 +98,8 @@ export default async function Home() {
                 <div className={joinClassNames(styles.leftColCaption, styles.desktop)}>
                   Fashion
                 </div>
-                <div className={joinClassNames(styles.leftColDescription, "mt-16px")}>
-                  By focusing on recycled,
-                  renewable materials, clean electricity, and low-carbon shipping
+                <div className={styles.leftColDescription}>
+                  The clothes are made from recycled fabric and dyed using natural dyes such as root, charcoal, etc.
                 </div>
                 <div className={joinClassNames(styles.leftColBottom, "pb-40px")}>
                   <div className={styles.leftColBottomTexts}>
@@ -169,23 +167,22 @@ export default async function Home() {
             <div className={joinClassNames(styles.packageColCaption, styles.packageLastCol)}>3</div>
           </div>
         </div>
-        <div className={joinClassNames(styles.blockTitle, styles.mobile, "mt-16px")}>
-          One package without paint for different garments
+        <div className={joinClassNames(styles.blockTitle, styles.mobile)}>
+          To reduce production waste, the same packaging is used for different garments, using recycled uncolored material. Only the information sticker differs
         </div>
         <div className={joinClassNames(styles.leftCol, styles.mobile)}>
           <div className={joinClassNames(styles.leftColBottom)}>
             <div className={styles.leftColBottomTexts}>
-              <div className={styles.leftColCaption}>Info</div>
+              <div className={styles.leftColCaption}>Info sticker</div>
               <div className={styles.leftColBottomText}>
-                <div>Cultural heritage</div>
-                <div>Environmental friendliness</div>
+                <div>Made of recycled cardboard, natural coloring applied. 100% recyclable</div>
               </div>
             </div>
             <div className={styles.leftColBottomTexts}>
               <div className={styles.leftColCaption}>Pack</div>
               <div className={styles.leftColBottomText}>
-                <div>Harmony with nature, culture</div>
-                <div>Connecting the past and the future</div>
+                <div>Recycled uncolored cardboard.</div>
+                <div>Embossing is used to reduce ink consumption</div>
               </div>
             </div>
           </div>

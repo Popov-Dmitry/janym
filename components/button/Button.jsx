@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Button = ({
   text,
-  font = "beVietnamPro",
+  font = "generalSans",
   type,
   disabled,
   onClick,

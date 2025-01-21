@@ -1,7 +1,7 @@
 .button {
-  @apply px-8px py-20px;
+  @apply px-8px py-30px;
   @apply md:px-20px md:py-60px;
-  @apply text-28px no-underline;
+  @apply text-26px font-general-sans no-underline;
   @apply md:text-32px;
   @apply lg:text-44px;
   @apply 2xl:text-54px;
@@ -15,6 +15,7 @@
   @apply md:leading-54px md:tracking-[-0.01em];
 }
 
-.beVietnamPro {
-  @apply font-be-vietnam-pro leading-68px tracking-tighter;
+.generalSans {
+  @apply font-general-sans leading-32px tracking-tighter;
+  @apply md:leading-68px;
 }

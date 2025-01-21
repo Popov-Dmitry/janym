@@ -1,13 +1,14 @@
 .productPreview {
   @apply flex flex-col items-center w-100%;
+  @apply pb-40px;
 
   .content {
-    @apply px-4px pt-16px pb-32px;
+    @apply pt-10px pb-40px;
     @apply md:px-60px md:pt-40px md:pb-80px;
   }
 
   .imageWrapper {
-    @apply aspect-[4/3] h-256px;
+    @apply aspect-[4/3] w-100%;
     @apply lg:h-300px;
     @apply min-[1500px]:h-350px;
     @apply my-100px md:my-0;
@@ -19,7 +20,7 @@
   }
 
   .text {
-    @apply text-16px leading-26px tracking-wider;
+    @apply text-18px leading-28px tracking-wider font-general-sans;
     @apply md:text-24px md:leading-24px md:tracking-normal;
     @apply lg:text-32px lg:leading-34px;
     @apply flex flex-col items-center;
