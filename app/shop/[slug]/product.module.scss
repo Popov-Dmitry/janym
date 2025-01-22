@@ -1,7 +1,8 @@
 .container {
   @apply grid grid-cols-1 gap-20px;
   @apply md:grid-cols-2;
-  @apply md:h-[calc(100vh_-_56px)];
+  @apply md:min-h-[calc(100vh_-_56px)];
+  @apply px-10px md:px-40px;
 }
 
 .imageWrapper {
@@ -11,10 +12,10 @@
 }
 
 .content {
-  @apply mx-10px;
-  @apply md:pr-40px md:pt-60px md:mx-0;
+  @apply md:pt-60px md:mx-0;
   @apply min-h-100%;
   @apply flex flex-col gap-40px;
+  @apply md:gap-60px;
 }
 
 .title, .description, .price {
@@ -28,18 +29,14 @@
 
 .price {
   @apply md:my-auto;
-}
-
-.description {
-  @apply md:mt-54px;
-  //@apply [@media(max-height:950px)]:mt-22px;
+  @apply md:py-10px;
 }
 
 .info {
   @apply flex flex-row-reverse items-start justify-between gap-8px;
   @apply md:flex-col md:gap-0 md:h-100%;
   //@apply mt-42px;
-  @apply md:mt-60px;
+  //@apply md:mt-60px;
   //@apply [@media(max-height:950px)]:mt-22px;
 }
 
@@ -48,22 +45,21 @@
   @apply md:text-22px md:leading-24px;
   @apply lg:text-26px md:leading-28px;
   @apply xl:text-28px xl:leading-30px;
-  @apply 2xl:text-32px 2xl:leading-34px;
+  @apply 2xl:text-32px 2xl:leading-38px;
 }
 
 .bottom {
-  //@apply mt-40px;
+  @apply mt-[-60px];
 }
 
 .caption {
   @apply hidden md:block;
-  @apply leading-23px;
-  @apply text-14px;
+  @apply text-14px leading-23px font-general-sans;
   @apply lg:text-16px;
+  @apply mb-20px;
 }
 
 .divider {
   @apply w-100%;
   @apply border border-black;
-  //@apply mt-19px;
 }
