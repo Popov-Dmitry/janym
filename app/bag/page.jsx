@@ -8,6 +8,7 @@ import Checkbox from "@/components/checkbox/Checkbox";
 import Button from "@/components/button/Button";
 import { getProductsFromCart } from "@/utils/db-requests-client";
 import Link from "next/link";
+import Image from "next/image";
 
 const Bag = () => {
   const { cart, removeItem } = useCart();
@@ -32,11 +33,11 @@ const Bag = () => {
     <div className={styles.container}>
       {cartDetails.map((item) => (
         <React.Fragment key={item.id}>
-          <Link href={`/shop/${item.slug}`} className={styles.mobile}>
+          <Link href={`/shop/${item.slug}`} className={joinClassNames(styles.mobile, styles.item)}>
             <div className={styles.top}>
               <div>{item.title}</div>
               <div className={styles.removeMobile} onClick={() => removeItem(item.slug)}>
-                X
+                <Image src="/x.svg" alt="" width={20} height={19} />
               </div>
             </div>
             <div className={styles.section}>
@@ -75,8 +76,7 @@ const Bag = () => {
         </React.Fragment>
       ))}
       <div className={styles.bottom}>
-        <Checkbox
-          text="By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order might be subject to local duties/taxes imposed by the country of destination (if applicable) that are my.full responsibility. " />
+        <Checkbox text="By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order." />
         <div className={styles.total}>
           <span className={styles.desktop}>
             Total: ${cartDetails.reduce((prev, curr) => prev + curr.price, 0)}
