@@ -1,10 +1,10 @@
 .container {
   @apply block relative;
   @apply cursor-pointer;
-  @apply text-18px leading-22px;
+  @apply text-18px leading-22px font-general-sans tracking-[0.04em];
   @apply md:text-16px md:leading-17px;
   @apply lg:text-20px lg:leading-21px;
-  @apply pl-34px mb-10px;
+  @apply pl-30px mb-10px;
   @apply select-none;
   -webkit-user-select: none;
   -moz-user-select: none;
