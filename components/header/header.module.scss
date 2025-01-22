@@ -1,6 +1,6 @@
 .header {
   @apply grid grid-cols-1 w-full;
-  @apply md:grid-cols-12 md:gap-24px;
+  @apply md:grid-cols-12 md:gap-20px;
   @apply px-40px py-14px;
   @apply relative;
 
@@ -14,10 +14,11 @@
 
   .link {
     @apply hidden md:block;
-    @apply font-semibold;
+    @apply text-16px leading-17px font-general-sans;
+    @apply my-auto;
 
     &:last-child {
-      @apply block absolute right-[40px] top-[14px];
+      @apply block absolute right-[40px] top-[18px];
       @apply md:static md:col-span-3 md:ml-auto;
     }
   }
