@@ -18,12 +18,12 @@
 
 .section {
   @apply grid grid-cols-3 gap-30px;
-  @apply md:grid-cols-2;
+  @apply md:grid-cols-2 md:gap-20px;
   @apply border-b-2 border-black;
   @apply py-10px md:py-60px;
 
   .imageWrapper {
-    @apply max-h-[230px];
+    @apply max-h-[230px] md:max-h-290px;
     @apply flex items-center justify-center;
     @apply cursor-pointer;
     @apply col-span-2 md:col-span-1;
@@ -40,14 +40,13 @@
 
   .specification {
     @apply text-18px leading-22px font-general-sans;
-    @apply lg:text-18px;
-    @apply mt-30px md:mt-32px;
+    @apply lg:text-16px leading-26px;
+    @apply mt-30px md:mt-20px;
   }
 
   .remove {
-    @apply text-14px leading-17px underline cursor-pointer;
-    @apply lg:text-16px;
-    @apply mt-24px md:mt-auto;
+    @apply text-16px leading-17px font-general-sans underline cursor-pointer;
+    @apply md:mt-auto;
     @apply hidden md:block;
   }
 
@@ -88,11 +87,12 @@
   @apply border-b-2 border-black;
   @apply md:border-0;
   @apply py-24px md:py-0;
+  @apply md:flex md:items-center md:justify-end;
 }
 
 .bottom {
   @apply flex flex-col-reverse gap-10px;
-  @apply md:grid md:grid-cols-2 md:gap-30px;
+  @apply md:grid md:grid-cols-2 md:gap-20px;
   @apply border-b-2 border-black;
   @apply md:py-60px;
 }

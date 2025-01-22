@@ -9,8 +9,10 @@ import Button from "@/components/button/Button";
 import { getProductsFromCart } from "@/utils/db-requests-client";
 import Link from "next/link";
 import Image from "next/image";
+import useResponsive from "@/hooks/use-responsive";
 
 const Bag = () => {
+  const { isMobile } = useResponsive();
   const { cart, removeItem } = useCart();
   const [cartDetails, setCartDetails] = useState([]);
 
@@ -33,7 +35,7 @@ const Bag = () => {
     <div className={styles.container}>
       {cartDetails.map((item) => (
         <React.Fragment key={item.id}>
-          <Link href={`/shop/${item.slug}`} className={joinClassNames(styles.mobile, styles.item)}>
+          <Link href={`/shop/${item.slug}`} className={styles.mobile}>
             <div className={styles.top}>
               <div>{item.title}</div>
               <div className={styles.removeMobile} onClick={() => removeItem(item.slug)}>
@@ -76,7 +78,12 @@ const Bag = () => {
         </React.Fragment>
       ))}
       <div className={styles.bottom}>
-        <Checkbox text="By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order." />
+        <Checkbox
+          text={isMobile
+            ? "By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order."
+            : "By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order might be subject to local duties/taxes imposed by the country of destination (if applicable) that are my.full responsibility."
+          }
+        />
         <div className={styles.total}>
           <span className={styles.desktop}>
             Total: ${cartDetails.reduce((prev, curr) => prev + curr.price, 0)}
@@ -86,7 +93,7 @@ const Bag = () => {
           </span>
         </div>
       </div>
-      <Button text="Check Out" font="sfPro" />
+      <Button text="Check Out" font={isMobile ? "generalSans" : "sfPro"} />
     </div>
   );
 };
