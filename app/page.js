@@ -68,7 +68,7 @@ export default async function Home() {
               <div className={styles.leftColBottomTexts}>
                 <div className={styles.leftColCaption}>Values</div>
                 <div className={styles.leftColBottomText}>
-                  <div>CConservation of culture and nature</div>
+                  <div>Conservation of culture and nature</div>
                   <div>Supporting local artisans</div>
                   <div>Adaptability and practicality</div>
                 </div>
@@ -127,6 +127,36 @@ export default async function Home() {
         </div>
         <div className={joinClassNames(styles.colImage, styles.mobile)}>
           <Image src="/optimizer-mobile.png" alt="" fill />
+        </div>
+      </div>
+
+      <div className={styles.blockFullHeight}>
+        <div className={styles.blockTitle}>Our future collection</div>
+        <div className={styles.twoCols}>
+          <div className={styles.leftCol}>
+            <div className={styles.leftColDescription}>
+              The upcoming collection will be made entirely from recycled fabrics and dyed with natural ingredients.
+            </div>
+            <div className={styles.leftColBottom}>
+              <div className={styles.leftColBottomTexts}>
+                <div className={styles.leftColCaption}>Clothing</div>
+                <div className={styles.leftColBottomText}>
+                  <div>Made from recycled natural fabric</div>
+                </div>
+              </div>
+              <div className={styles.leftColBottomTexts}>
+                <div className={styles.leftColCaption}>Accessories</div>
+                <div className={styles.leftColBottomText}>
+                  <div>Made of sterling silver and leather</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.aboutImageWrapper}>
+            <div className={styles.aboutImage}>
+              <Image src="/future-collection-mobile.png" alt="" fill />
+            </div>
+          </div>
         </div>
       </div>
 
