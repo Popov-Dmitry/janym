@@ -1,5 +1,5 @@
 .container {
-  @apply grid grid-cols-1 gap-15px;
+  @apply grid grid-cols-1 gap-20px;
   @apply md:grid-cols-2;
   @apply md:h-[calc(100vh_-_56px)];
 }
@@ -14,16 +14,16 @@
   @apply mx-10px;
   @apply md:pr-40px md:pt-60px md:mx-0;
   @apply min-h-100%;
-  @apply flex flex-col;
+  @apply flex flex-col gap-40px;
 }
 
 .title, .description, .price {
-  @apply text-24px leading-30px;
+  @apply text-26px leading-31px font-general-sans;
   @apply md:text-28px md:leading-32px md:tracking-[-0.01em];
   @apply lg:text-32px lg:leading-36px;
   @apply xl:text-42px xl:leading-46px;
   @apply 2xl:text-58px 2xl:leading-58px;
-  @apply [@media(max-height:950px)]:text-24px [@media(max-height:950px)]:leading-30px;
+  //@apply [@media(max-height:950px)]:text-24px [@media(max-height:950px)]:leading-30px;
 }
 
 .price {
@@ -31,20 +31,20 @@
 }
 
 .description {
-  @apply mt-32px md:mt-54px;
-  @apply [@media(max-height:950px)]:mt-22px;
+  @apply md:mt-54px;
+  //@apply [@media(max-height:950px)]:mt-22px;
 }
 
 .info {
   @apply flex flex-row-reverse items-start justify-between gap-8px;
   @apply md:flex-col md:gap-0 md:h-100%;
-  @apply mt-42px;
+  //@apply mt-42px;
   @apply md:mt-60px;
-  @apply [@media(max-height:950px)]:mt-22px;
+  //@apply [@media(max-height:950px)]:mt-22px;
 }
 
 .specification {
-  @apply text-18px leading-22px;
+  @apply text-18px leading-22px font-general-sans;
   @apply md:text-22px md:leading-24px;
   @apply lg:text-26px md:leading-28px;
   @apply xl:text-28px xl:leading-30px;
@@ -52,7 +52,7 @@
 }
 
 .bottom {
-  @apply mt-auto;
+  //@apply mt-40px;
 }
 
 .caption {
@@ -65,5 +65,5 @@
 .divider {
   @apply w-100%;
   @apply border border-black;
-  @apply mt-19px;
+  //@apply mt-19px;
 }
