@@ -171,39 +171,39 @@ export default async function Home() {
 
       <div className={styles.block}>
         <div className={styles.packageGrid}>
-          <div className={joinClassNames(styles.blockTitle, "col-span-2")}>
+          <div className={joinClassNames(styles.blockTitle, "col-span-5")}>
             Package
           </div>
-          <div className={styles.desktop}>
+          <div className={joinClassNames(styles.desktop, "col-span-3")}>
             <div className={styles.caption}>AW</div>
-            <div className={joinClassNames(styles.packageColCaption, "mt-14px")}>
+            <div className={joinClassNames(styles.packageColCaption, "mt-20px")}>
               <div>Saturday</div>
               <div>October 21st</div>
               <div>from 8pm until 1am</div>
             </div>
           </div>
-          <div className={styles.desktop}>
+          <div className={joinClassNames(styles.desktop, "col-span-2")}>
             <div className={styles.caption}>Autumn Winter</div>
-            <div className={joinClassNames(styles.packageColCaption, "mt-14px")}>
+            <div className={joinClassNames(styles.packageColCaption, "mt-20px")}>
               <div>Bene Bene</div>
               <div>Via Giovanni Battista</div>
               <div>20129</div>
             </div>
           </div>
-          <div className={styles.desktop}>
-            <div className={joinClassNames(styles.caption, styles.packageLastCol)}>
+          <div className={joinClassNames(styles.desktop, "col-span-2")}>
+            <div className={styles.caption}>
               Personal Investigation
             </div>
           </div>
         </div>
         <div className={styles.desktop}>
           <div className={joinClassNames(styles.packageGrid, "mt-117px")}>
-            <div className={joinClassNames(styles.packageColCaption, "col-span-2")}>
+            <div className={joinClassNames(styles.packageColCaption, "col-span-5")}>
               One package without paint for different garments
             </div>
-            <div className={styles.packageColCaption}>1</div>
-            <div className={styles.packageColCaption}>2</div>
-            <div className={joinClassNames(styles.packageColCaption, styles.packageLastCol)}>3</div>
+            <div className={joinClassNames(styles.packageColCaption, "col-span-3")}>1</div>
+            <div className={joinClassNames(styles.packageColCaption, "col-span-2")}>2</div>
+            <div className={joinClassNames(styles.packageColCaption, "col-span-2")}>3</div>
           </div>
         </div>
         <div className={joinClassNames(styles.blockTitle, styles.mobile)}>

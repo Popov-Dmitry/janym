@@ -15,23 +15,27 @@
 }
 
 .packageGrid {
-  @apply grid grid-cols-5 gap-32px;
+  @apply grid grid-cols-12 gap-20px;
 }
 
 .packageLastCol {
-  @apply ml-[-40px];
+  //@apply ml-[-40px];
 }
 
 .packageTags {
-  @apply absolute top-0 bottom-0;
+  @apply absolute top-0 bottom-0 h-100%;
 }
 
 .packageImages {
   @apply mt-14px relative;
 }
 
+.packageImageWrapper {
+
+}
+
 .packageImage {
-  @apply h-100% w-[60%];
+  @apply h-100%;
   @apply cursor-pointer;
   @apply duration-150;
 }

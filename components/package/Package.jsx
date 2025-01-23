@@ -9,15 +9,15 @@ const initialState = {
   desktop: [
     {
       tag: "/pants.png",
-      packageStyle: "col-span-3"
+      packageStyle: "col-span-8"
     },
     {
       tag: "/knitwear.png",
-      packageStyle: joinClassNames("col-span-3", styles.packageRed)
+      packageStyle: joinClassNames("col-span-8", styles.packageRed)
     },
     {
       tag: "/shirt.png",
-      packageStyle: joinClassNames("col-span-3", styles.packageGreen)
+      packageStyle: joinClassNames("col-span-8", styles.packageGreen)
     }
   ],
   mobile: {
@@ -36,17 +36,18 @@ const Package = () => {
             <img src="/package.png" className={state.desktop[0].packageStyle} />
           </div>
           <div className={joinClassNames(styles.packageTags, styles.packageGrid)}>
-            <div className="col-span-2" />
+            <div className="col-span-5" />
             {state.desktop.map((item, i) => (
-              <img
+              <div
                 key={item.tag}
-                src={item.tag}
-                className={joinClassNames(
-                  styles.packageImage,
-                  i === state.desktop.length - 1 ? styles.packageLastCol : undefined
-                )}
-                onClick={() => setState({ ...state, desktop: swap(state.desktop, 0, i) })}
-              />
+                className={`duration-150 hover:scale-105 h-100% col-span-2 ${i === 0 ? "col-span-3" : ""}`}
+              >
+                <img
+                  src={item.tag}
+                  className={`cursor-pointer h-100% ${i === 0 ? "w-[50%]" : "w-[80%]"}`}
+                  onClick={() => setState({ ...state, desktop: swap(state.desktop, 0, i) })}
+                />
+              </div>
             ))}
           </div>
         </div>

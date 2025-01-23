@@ -29,6 +29,7 @@
   @apply flex flex-col justify-center items-center gap-40px;
   @apply md:gap-100px;
   @apply pt-38px pb-10px;
+  @apply md:pb-40px;
   @apply 2xl:pt-165px;
 }
 
@@ -221,9 +222,5 @@
 }
 
 .packageGrid {
-  @apply grid grid-cols-5 gap-32px;
-}
-
-.packageLastCol {
-  @apply ml-[-40px];
+  @apply grid grid-cols-12 gap-20px;
 }
