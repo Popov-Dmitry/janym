@@ -1,7 +1,8 @@
 .mediaSlider {
-  @apply flex flex-col;
-  @apply overflow-y-scroll;
-  @apply overflow-x-hidden;
+  @apply flex;
+  @apply md:flex-col;
+  @apply overflow-x-scroll overflow-y-hidden;
+  @apply md:overflow-y-scroll md:overflow-x-hidden;
   @apply overscroll-contain;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -10,6 +11,7 @@
     @apply min-h-100% min-w-100%;
     @apply flex items-center justify-center;
     @apply cursor-pointer;
+    @apply md:pl-4px;
   }
 
   .media {
@@ -26,20 +28,53 @@
   display: none;
 }
 
-.fullView {
-  @apply w-100vw h-[calc(100vh_-_56px)];
-  @apply fixed bottom-0 left-0 top-[56px];
+.fullViewWrapper {
+  @apply w-100vw md:w-100vw h-[calc(100vh_-_56px)];
+  @apply absolute bottom-0 left-0 right-0 top-[56px];
   @apply bg-white;
-  @apply flex flex-col items-center;
+  @apply flex items-center;
+  @apply overflow-hidden;
+}
+
+.fullView {
+  @apply w-fit;
+  @apply flex items-center;
+  @apply md:flex-col;
   @apply cursor-pointer;
   @apply z-10;
-  @apply overflow-y-scroll;
-  @apply overflow-x-hidden;
+  @apply overflow-x-scroll overflow-y-hidden;
+  @apply md:overflow-y-scroll md:overflow-x-hidden;
   @apply overscroll-contain;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
+.fullViewMediaWrapper {
+  @apply min-w-100vw md:min-w-auto;
+}
+
 .fullViewMedia {
-  @apply md:h-[calc(100vh_-_56px)];
+  @apply w-100vw;
+  @apply md:h-[calc(100vh_-_56px)] md:w-auto;
+}
+
+.progress {
+  @apply mt-10px md:mt-0;
+  @apply md:absolute md:top-[50%] md:translate-y-[-50%];
+  @apply md:h-[calc(100vh/3)];
+  @apply flex gap-10px;
+  @apply md:flex-col
+}
+
+.progressItem, .currentProgressItem {
+  @apply w-100% h-2px;
+  @apply md:h-100% md:w-2px;
+}
+
+.progressItem {
+  @apply bg-[#C0C0C0];
+}
+
+.currentProgressItem {
+  @apply bg-black;
 }
