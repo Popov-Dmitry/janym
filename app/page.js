@@ -14,24 +14,24 @@ export default async function Home() {
         <div className={styles.hero}>
           <div className={styles.heroTitleWrapper}>
             <div className={styles.heroTitle}>FW’24</div>
-            <div className={styles.heroSubtitle}>Double Wrap Bracelet</div>
+            <div className={styles.heroSubtitle}>
+              Janym reimagining Kazakh traditions through a modern lens. Each collection tells the story of the country,
+              starting with
+              a response to the Aral tragedy.
+            </div>
           </div>
-          <div className={styles.heroCaption}>
-            <div>Janym Sol</div>
-            <div>FW’24</div>
-          </div>
+          {/*<div className={styles.heroCaption}>*/}
+          {/*  <div>Janym Sol</div>*/}
+          {/*  <div>FW’24</div>*/}
+          {/*</div>*/}
         </div>
         <div className={styles.heroImage}>
           <Image src="/aral-sea-collection.png" alt="" fill />
         </div>
         <div className={styles.heroBottom}>
+          <div className={styles.heroBottomSpace} />
           <div className={styles.heroBottomCaption}>
-            <div>FW’</div>
-            <div>24</div>
-          </div>
-          <div className={styles.heroBottomText}>
-            &#34;A brand reinterpreting Kazakh traditions in a modern context. Each collection reflects the nature and
-            history of Kazakhstan, with the first one responding to the tragedy of the Aral Sea.&#34;
+            Handcrafted from black leather and silver-tone metal, double wrap bracelet with a combination of ornaments.
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ export default async function Home() {
         <div className={styles.black} />
       </div>
 
-      <div className={styles.block} id="shop">
+      <div className={styles.productsBlock} id="shop">
         <div className={joinClassNames(styles.blockTitle, styles.mobile)}>Collection</div>
         <div className={joinClassNames(styles.blockTitle, styles.desktop)}>Spring-Summer 25</div>
         <div className={styles.products}>
@@ -58,41 +58,46 @@ export default async function Home() {
       </div>
 
       <div className={styles.blockFullHeight} id="about">
-        <div className={styles.blockTitle}>About Janym</div>
         <div className={styles.twoCols}>
-          <div className={styles.leftCol}>
-            <div className={styles.leftColDescription}>
-              The brand takes traditional Kazakh garments and ornaments as a basis and deconstructs them, preserving the cultural code.
-            </div>
-            <div className={styles.leftColBottom}>
-              <div className={styles.leftColBottomTexts}>
-                <div className={styles.leftColCaption}>Values</div>
-                <div className={styles.leftColBottomText}>
-                  <div>Conservation of culture and nature</div>
-                  <div>Supporting local artisans</div>
-                  <div>Adaptability and practicality</div>
-                </div>
+          <div className={styles.leftColWrapper}>
+            <div className={styles.blockTitle}>About Janym</div>
+            <div className={styles.leftCol}>
+              <div className={styles.leftColDescription}>
+                The brand takes traditional Kazakh garments and ornaments as a basis and deconstructs them, preserving
+                the cultural code.
               </div>
-              <div className={styles.leftColBottomTexts}>
-                <div className={styles.leftColCaption}>Philosophy</div>
-                <div className={styles.leftColBottomText}>
-                  <div>We preserve traditions, because they give us the strength and wisdom to build the future.</div>
+              <div className={styles.leftColBottom}>
+                <div className={styles.leftColBottomTexts}>
+                  <div className={styles.leftColCaption}>Values</div>
+                  <div className={styles.leftColBottomText}>
+                    <div>Conservation of culture and nature</div>
+                    <div>Supporting local artisans</div>
+                    <div>Adaptability and practicality</div>
+                  </div>
+                </div>
+                <div className={styles.leftColBottomTexts}>
+                  <div className={styles.leftColCaption}>Philosophy</div>
+                  <div className={styles.leftColBottomText}>
+                    <div>We preserve traditions, because they give us the strength and wisdom to build the future.</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className={styles.aboutImageWrapper}>
-            <div className={styles.aboutImage}>
-              <Image src="/about.png" alt="" fill />
+
+          <div className={styles.colImageWrapper}>
+            <div className={styles.colImage}>
+              <Image src="/about-mobile.png" alt="" fill className={styles.mobile} />
+              <Image src="/about-desktop.png" alt="" fill className={styles.desktop} />
             </div>
           </div>
         </div>
       </div>
 
       <div>
-        <div className={styles.ecological} id="ecological">
+        <div className={styles.blockFullHeightPr0} id="ecological">
           <div className={styles.twoCols}>
-            <div className={styles.ecologicalLeftColWrapper}>
+            <div className={styles.leftColWrapper}>
               <div className={styles.blockTitle}>Approach to garment Creation</div>
               <div className={styles.leftCol}>
                 <div className={joinClassNames(styles.leftColCaption, styles.desktop)}>
@@ -101,7 +106,7 @@ export default async function Home() {
                 <div className={styles.leftColDescription}>
                   The clothes are made from recycled fabric and dyed using natural dyes such as root, charcoal, etc.
                 </div>
-                <div className={joinClassNames(styles.leftColBottom, "pb-40px")}>
+                <div className={styles.leftColBottom}>
                   <div className={styles.leftColBottomTexts}>
                     <div className={styles.leftColCaption}>Values</div>
                     <div className={styles.leftColBottomText}>
@@ -130,31 +135,35 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className={styles.blockFullHeight}>
-        <div className={styles.blockTitle}>Our future collection</div>
+      <div className={styles.blockFullHeightPr0}>
         <div className={styles.twoCols}>
-          <div className={styles.leftCol}>
-            <div className={styles.leftColDescription}>
-              The upcoming collection will be made entirely from recycled fabrics and dyed with natural ingredients.
-            </div>
-            <div className={styles.leftColBottom}>
-              <div className={styles.leftColBottomTexts}>
-                <div className={styles.leftColCaption}>Clothing</div>
-                <div className={styles.leftColBottomText}>
-                  <div>Made from recycled natural fabric</div>
-                </div>
+          <div className={styles.leftColWrapper}>
+            <div className={styles.blockTitle}>Our future collection</div>
+            <div className={styles.leftCol}>
+              <div className={styles.leftColDescription}>
+                The upcoming collection will be made entirely from recycled fabrics and dyed with natural ingredients.
               </div>
-              <div className={styles.leftColBottomTexts}>
-                <div className={styles.leftColCaption}>Accessories</div>
-                <div className={styles.leftColBottomText}>
-                  <div>Made of sterling silver and leather</div>
+              <div className={styles.leftColBottom}>
+                <div className={styles.leftColBottomTexts}>
+                  <div className={styles.leftColCaption}>Clothing</div>
+                  <div className={styles.leftColBottomText}>
+                    <div>Made from recycled natural fabric</div>
+                  </div>
+                </div>
+                <div className={styles.leftColBottomTexts}>
+                  <div className={styles.leftColCaption}>Accessories</div>
+                  <div className={styles.leftColBottomText}>
+                    <div>Made of sterling silver and leather</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className={styles.aboutImageWrapper}>
-            <div className={styles.aboutImage}>
-              <Image src="/future-collection-mobile.png" alt="" fill />
+
+          <div className={styles.colImageWrapper}>
+            <div className={styles.colImage}>
+              <Image src="/future-collection-mobile.png" alt="" fill className={styles.mobile} />
+              <Image src="/future-collection-desktop.png" alt="" fill className={styles.desktop} />
             </div>
           </div>
         </div>
@@ -198,7 +207,8 @@ export default async function Home() {
           </div>
         </div>
         <div className={joinClassNames(styles.blockTitle, styles.mobile)}>
-          To reduce production waste, the same packaging is used for different garments, using recycled uncolored material. Only the information sticker differs
+          To reduce production waste, the same packaging is used for different garments, using recycled uncolored
+          material. Only the information sticker differs
         </div>
         <div className={joinClassNames(styles.leftCol, styles.mobile)}>
           <div className={joinClassNames(styles.leftColBottom)}>

@@ -1,10 +1,10 @@
 .productPreview {
   @apply flex flex-col items-center w-100%;
-  @apply pb-40px;
+  @apply pb-20px;
 
   .content {
     @apply pt-10px pb-40px;
-    @apply md:px-60px md:pt-40px md:pb-80px;
+    @apply md:px-60px md:pt-70px md:pb-100px;
   }
 
   .imageWrapper {
@@ -25,7 +25,7 @@
     @apply lg:text-32px lg:leading-34px;
     @apply flex flex-col items-center;
     @apply md:gap-32px;
-    @apply mt-20px md:mt-40px lg:mt-100px;
+    @apply mt-20px md:mt-40px lg:mt-90px;
   }
 
   .divider, .dividerMobile {
