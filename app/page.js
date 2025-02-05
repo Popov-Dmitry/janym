@@ -4,6 +4,7 @@ import Image from "next/image";
 import { joinClassNames } from "@/utils/join-class-names";
 import { getPreviews } from "@/utils/db-requests-server";
 import Package from "@/components/package/Package";
+import React from "react";
 
 export default async function Home() {
   const products = await getPreviews();
@@ -40,13 +41,23 @@ export default async function Home() {
       <div className={styles.heroWrapperMobile}>
         <div className={styles.block}>
           <div className={styles.heroTitle}>FW’25</div>
-          <div className={styles.heroBottomText}>
-            We’re working to bring our net emissions to zero across our entire
-            carbon footprint.
-          </div>
+          {/*<div className={styles.heroBottomText}>*/}
+          {/*  We’re working to bring our net emissions to zero across our entire*/}
+          {/*  carbon footprint.*/}
+          {/*</div>*/}
         </div>
-        <img src="/hero-mobile.png" alt="" className={styles.heroImage} />
-        <div className={styles.black} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          // className={isFullView ? styles.fullViewMedia : styles.media}
+          className={styles.heroImage}
+        >
+          <source src="/hero-video-mobile.mp4" type="video/mp4" />
+        </video>
+        {/*<img src="/hero-mobile.png" alt="" className={styles.heroImage} />*/}
+        {/*<div className={styles.black} />*/}
       </div>
 
       <div className={styles.productsBlock} id="shop">

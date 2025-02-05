@@ -162,7 +162,7 @@
 .heroImage {
   @apply relative;
   @apply w-100% md:h-[400px] 2xl:h-[500px];
-  @apply mt-140px;
+  @apply mt-auto;
   @apply md:mt-80px;
 }
 
