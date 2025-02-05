@@ -90,25 +90,25 @@
     @apply xl:text-42px xl:leading-42px;
     @apply 2xl:text-56px 2xl:leading-56px;
   }
+}
 
-  .leftColBottomTexts {
-    @apply flex flex-col gap-20px;
-  }
+.leftColBottomTexts {
+  @apply flex flex-col gap-20px;
+}
 
-  .leftColCaption {
-    @apply text-18px leading-22px font-general-sans;
-    @apply md:text-14px md:leading-14px;
-    @apply 2xl:text-16px 2xl:leading-17px;
-  }
+.leftColCaption {
+  @apply text-18px leading-22px font-general-sans;
+  @apply md:text-14px md:leading-14px;
+  @apply 2xl:text-16px 2xl:leading-17px;
+}
 
-  .leftColBottomText {
-    @apply text-18px leading-22px font-general-sans;
-    @apply md:text-18px md:leading-22px;
-    @apply lg:text-20px md:leading-20px;
-    @apply xl:text-22px xl:leading-22px;
-    @apply 2xl:text-28px 2xl:leading-28px;
-    @apply min-[1800px]:text-32px min-[1800px]:leading-34px;
-  }
+.leftColBottomText {
+  @apply text-18px leading-22px font-general-sans;
+  @apply md:text-18px md:leading-22px;
+  @apply lg:text-20px md:leading-20px;
+  @apply xl:text-22px xl:leading-22px;
+  @apply 2xl:text-28px 2xl:leading-28px;
+  @apply min-[1800px]:text-32px min-[1800px]:leading-34px;
 }
 
 .heroWrapper {
@@ -222,4 +222,19 @@
 
 .packageGrid {
   @apply grid grid-cols-12 gap-20px;
+}
+
+.packageDescription {
+  @apply md:mt-30px;
+  @apply text-26px leading-31px font-general-sans;
+  @apply md:text-24px md:leading-24px md:tracking-[0.01em];
+  @apply lg:text-32px lg:leading-32px;
+  @apply xl:text-42px xl:leading-42px;
+  @apply 2xl:text-58px 2xl:leading-58px;
+}
+
+.packageInfo {
+  @apply mt-80px md:mt-120px;
+  @apply grid grid-cols-2 gap-x-10px;
+  @apply md:grid-cols-12 md:gap-x-20px;
 }

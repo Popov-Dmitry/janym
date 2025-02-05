@@ -208,83 +208,30 @@ export default async function Home() {
       </div>
 
       <div className={styles.block}>
+        <div className={joinClassNames(styles.blockTitle)}>
+          Package
+        </div>
         <div className={styles.packageGrid}>
-          <div className={joinClassNames(styles.blockTitle, "col-span-5")}>
-            Package
-          </div>
-          <div className={joinClassNames(styles.desktop, "col-span-3")}>
-            <div className={styles.caption}>AW</div>
-            <div
-              className={joinClassNames(styles.packageColCaption, "mt-20px")}
-            >
-              <div>Saturday</div>
-              <div>October 21st</div>
-              <div>from 8pm until 1am</div>
-            </div>
-          </div>
-          <div className={joinClassNames(styles.desktop, "col-span-2")}>
-            <div className={styles.caption}>Autumn Winter</div>
-            <div
-              className={joinClassNames(styles.packageColCaption, "mt-20px")}
-            >
-              <div>Bene Bene</div>
-              <div>Via Giovanni Battista</div>
-              <div>20129</div>
-            </div>
-          </div>
-          <div className={joinClassNames(styles.desktop, "col-span-2")}>
-            <div className={styles.caption}>Personal Investigation</div>
-          </div>
-        </div>
-        <div className={styles.desktop}>
-          <div className={joinClassNames(styles.packageGrid, "mt-117px")}>
-            <div
-              className={joinClassNames(styles.packageColCaption, "col-span-5")}
-            >
-              One package without paint for different garments
-            </div>
-            <div
-              className={joinClassNames(styles.packageColCaption, "col-span-3")}
-            >
-              1
-            </div>
-            <div
-              className={joinClassNames(styles.packageColCaption, "col-span-2")}
-            >
-              2
-            </div>
-            <div
-              className={joinClassNames(styles.packageColCaption, "col-span-2")}
-            >
-              3
+          <div className={joinClassNames("col-span-12 md:col-span-10")}>
+            <div className={styles.packageDescription}>
+              To reduce production waste, the same packaging is used
+              for different garments, using recycled uncolored material. Only the information sticker differs.
             </div>
           </div>
         </div>
-        <div className={styles.leftCol}>
-          <div
-            className={joinClassNames(styles.leftColDescription, styles.mobile)}
-          >
-            To reduce production waste, the same packaging is used for different
-            garments, using recycled uncolored material. Only the information
-            sticker differs
-          </div>
-        </div>
-        <div className={joinClassNames(styles.leftCol, styles.mobile)}>
-          <div className={joinClassNames(styles.leftColBottom)}>
-            <div className={styles.leftColBottomTexts}>
-              <div className={styles.leftColCaption}>Info sticker</div>
-              <div className={styles.leftColBottomText}>
-                <div>
-                  Made of recycled cardboard, natural coloring applied. 100%
-                  recyclable
-                </div>
-              </div>
+        <div className={joinClassNames(styles.packageInfo)}>
+          <div className={joinClassNames(styles.leftColBottomTexts, "md:order-2 md:col-span-4")}>
+            <div className={styles.leftColCaption}>Informational band</div>
+            <div className={styles.leftColBottomText}>
+              <div>Variety of informational band for different products.</div>
             </div>
-            <div className={styles.leftColBottomTexts}>
-              <div className={styles.leftColCaption}>Pack</div>
-              <div className={styles.leftColBottomText}>
-                <div>Recycled uncolored cardboard.</div>
-                <div>Embossing is used to reduce ink consumption</div>
+          </div>
+          <div className={joinClassNames(styles.leftColBottomTexts, "md:col-span-8")}>
+            <div className={styles.leftColCaption}>Pack</div>
+            <div className={styles.leftColBottomText}>
+              <div>Recycled uncolored cardboard.</div>
+              <div>
+                Embossing is used to reduce ink consumption.
               </div>
             </div>
           </div>
