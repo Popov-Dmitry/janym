@@ -20,7 +20,7 @@
 }
 
 .twoCols {
-  @apply py-10px md:py-0;
+  @apply pt-10px pb-40px md:py-0;
   @apply md:grid md:grid-cols-2;
   @apply h-100%;
 }
@@ -42,14 +42,13 @@
 }
 
 .blockTitle {
-  @apply font-semibold text-18px leading-18px tracking-wider font-general-sans;
+  @apply text-18px leading-18px font-general-sans;
   @apply md:font-medium md:text-24px md:leading-24px;
   @apply md:font-medium lg:text-32px lg:leading-34px;
   @apply mb-10px;
 }
 
 .caption {
-  @apply font-semibold;
   @apply text-14px;
   @apply lg:text-16px;
 }
@@ -98,7 +97,7 @@
 
   .leftColCaption {
     @apply text-18px leading-22px font-general-sans;
-    @apply md:font-semibold md:text-14px md:leading-14px;
+    @apply md:text-14px md:leading-14px;
     @apply 2xl:text-16px 2xl:leading-17px;
   }
 
