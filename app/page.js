@@ -125,7 +125,7 @@ export default async function Home() {
       </div>
 
       <div>
-        <div className={styles.blockFullHeightPr0} id="ecological">
+        <div className={styles.blockFullHeight} id="ecological">
           <div className={styles.twoCols}>
             <div className={styles.leftColWrapper}>
               <div className={styles.blockTitle}>
@@ -141,22 +141,22 @@ export default async function Home() {
                   Fashion
                 </div> */}
                 <div className={styles.leftColDescription}>
-                  The clothes are made from recycled fabric and dyed using
-                  natural dyes such as root, charcoal, etc.
+                  Our clothing, made from recycled fabrics and dyed with natural dyes, reduces the carbon footprint and
+                  supports eco-friendly production.
                 </div>
                 <div className={styles.leftColBottom}>
-                  <div className={styles.leftColBottomTexts}>
-                    <div className={styles.leftColCaption}>Materials</div>
+                  <div className={styles.leftColCaption}>Materials</div>
+                  <div className={styles.leftColCaption}>Use of vegetable dyes and acids</div>
+                </div>
+                <div>
+                  <div className="grid grid-cols-2 gap-x-20px mt-20px">
                     <div className={styles.leftColBottomText}>
-                      <div>Cultural heritage</div>
-                      <div>Environmental friendliness</div>
+                      <div>Linen</div>
+                      <div>Cotton</div>
+                      <div>Silk</div>
                     </div>
-                  </div>
-                  <div className={styles.leftColBottomTexts}>
-                    <div className={styles.leftColCaption}>Colors</div>
                     <div className={styles.leftColBottomText}>
-                      <div>Harmony with nature, culture</div>
-                      <div>Connecting the past and the future</div>
+                      <div>The desired shade is achieved either with plant-based dyes or through acid treatment.</div>
                     </div>
                   </div>
                 </div>
@@ -164,12 +164,12 @@ export default async function Home() {
             </div>
 
             <div className={joinClassNames(styles.colImage, styles.desktop)}>
-              <Image src="/optimizer.png" alt="" fill />
+              <Image src="/approach-desktop.png" alt="" fill className="py-110px px-90px" />
             </div>
           </div>
         </div>
         <div className={joinClassNames(styles.colImage, styles.mobile)}>
-          <Image src="/optimizer-mobile.png" alt="" fill />
+          <Image src="/approach-mobile.png" alt="" fill />
         </div>
       </div>
 
