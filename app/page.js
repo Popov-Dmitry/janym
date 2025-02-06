@@ -74,30 +74,30 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className={styles.blockFullHeight} id="about">
+      <div className={styles.blockFullHeightPr0} id="about">
         <div className={styles.twoCols}>
           <div className={styles.leftColWrapper}>
             <div className={styles.blockTitle}>About Janym</div>
             <div className={styles.leftCol}>
               <div className={styles.leftColDescription}>
-                The brand takes traditional Kazakh garments and ornaments as a
-                basis and deconstructs them, preserving the cultural code.
+                Janym creates clothing, jewelry by reinterpreting traditional Kazakh patterns and cuts, with all pieces
+                crafted sustainably.
               </div>
               <div className={styles.leftColBottom}>
                 <div className={styles.leftColBottomTexts}>
                   <div className={styles.leftColCaption}>Values</div>
                   <div className={styles.leftColBottomText}>
-                    <div>Conservation of culture and nature</div>
-                    <div>Supporting local artisans</div>
-                    <div>Adaptability and practicality</div>
+                    <div>Cultural heritage</div>
+                    <div>Innovation in tradition</div>
+                    <div>Eco-friendliness</div>
+                    <div>Social responsibility</div>
                   </div>
                 </div>
                 <div className={styles.leftColBottomTexts}>
                   <div className={styles.leftColCaption}>Philosophy</div>
                   <div className={styles.leftColBottomText}>
                     <div>
-                      We preserve traditions, because they give us the strength
-                      and wisdom to build the future.
+                      Harmonizing nature and modernity while preserving cultural heritage.
                     </div>
                   </div>
                 </div>
