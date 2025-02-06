@@ -65,7 +65,7 @@ export default async function Home() {
           Collection
         </div>
         <div className={joinClassNames(styles.blockTitle, styles.desktop)}>
-          Spring-Summer 25
+          Pre-Spring Collection
         </div>
         <div className={styles.products}>
           {products?.map((product) => (
