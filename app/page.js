@@ -176,23 +176,29 @@ export default async function Home() {
       <div className={styles.blockFullHeightPr0}>
         <div className={styles.twoCols}>
           <div className={styles.leftColWrapper}>
-            <div className={styles.blockTitle}>Our future collection</div>
+            <div className={styles.blockTitle}>Upcoming spring collection</div>
             <div className={styles.leftCol}>
               <div className={styles.leftColDescription}>
-                The upcoming collection will be made entirely from recycled
-                fabrics and dyed with natural ingredients.
+                The first collection of clothing and jewelry is dedicated to the changes of the Aral Sea. Asymmetric
+                shapes, embroidery, and colors reflecting the transformation of the water body.
               </div>
               <div className={styles.leftColBottom}>
                 <div className={styles.leftColBottomTexts}>
-                  <div className={styles.leftColCaption}>Clothing</div>
+                  <div className={styles.leftColCaption}>Clothes</div>
                   <div className={styles.leftColBottomText}>
-                    <div>Made from recycled natural fabric</div>
+                    <div>Longsleeve 4</div>
+                    <div>Shirts: 3</div>
+                    <div>Skirts: 1</div>
+                    <div>Vest: 1</div>
+                    <div>Shorts</div>
                   </div>
                 </div>
                 <div className={styles.leftColBottomTexts}>
                   <div className={styles.leftColCaption}>Accessories</div>
                   <div className={styles.leftColBottomText}>
-                    <div>Made of sterling silver and leather</div>
+                    <div>Necklaces: 2</div>
+                    <div>Bracelets: 3</div>
+                    <div>Cuff: 2</div>
                   </div>
                 </div>
               </div>
