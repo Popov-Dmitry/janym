@@ -12,11 +12,11 @@ const initialState = {
       packageStyle: "col-span-8"
     },
     {
-      tag: "/knitwear.png",
+      tag: "/vest.png",
       packageStyle: joinClassNames("col-span-8", styles.packageRed)
     },
     {
-      tag: "/shirt.png",
+      tag: "/skirt.png",
       packageStyle: joinClassNames("col-span-8", styles.packageGreen)
     }
   ],
