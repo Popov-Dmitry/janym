@@ -30,7 +30,7 @@
   @apply md:gap-100px;
   @apply pt-38px pb-10px;
   @apply md:pb-40px;
-  @apply 2xl:pt-165px;
+  @apply md:pt-0;
 }
 
 .block {
@@ -113,6 +113,9 @@
 
 .heroWrapper {
   @apply hidden md:block;
+  @apply w-100%;
+  //@include block;
+  @apply h-[calc(100vh_-_56px)];
 }
 
 .heroWrapperMobile {
@@ -163,7 +166,7 @@
   @apply relative;
   @apply w-100% md:h-[400px] 2xl:h-[500px];
   @apply mt-auto;
-  @apply md:mt-80px;
+  @apply md:mt-400px;
 }
 
 .heroBottom {

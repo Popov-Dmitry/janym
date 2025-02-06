@@ -11,31 +11,31 @@ export default async function Home() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.heroWrapper}>
-        <div className={styles.hero}>
-          <div className={styles.heroTitleWrapper}>
-            <div className={styles.heroTitle}>FW’24</div>
-            <div className={styles.heroSubtitle}>
-              Janym reimagining Kazakh traditions through a modern lens. Each
-              collection tells the story of the country, starting with a
-              response to the Aral tragedy.
-            </div>
-          </div>
+      <div className={joinClassNames(styles.heroWrapper)}>
+        {/*<div className={styles.hero}>*/}
+          {/*<div className={styles.heroTitleWrapper}>*/}
+          {/*  <div className={styles.heroTitle}>FW’24</div>*/}
+          {/*  <div className={styles.heroSubtitle}>*/}
+          {/*    Janym reimagining Kazakh traditions through a modern lens. Each*/}
+          {/*    collection tells the story of the country, starting with a*/}
+          {/*    response to the Aral tragedy.*/}
+          {/*  </div>*/}
+          {/*</div>*/}
           {/*<div className={styles.heroCaption}>*/}
           {/*  <div>Janym Sol</div>*/}
           {/*  <div>FW’24</div>*/}
           {/*</div>*/}
-        </div>
+        {/*</div>*/}
         <div className={styles.heroImage}>
           <Image src="/aral-sea-collection.png" alt="" fill />
         </div>
-        <div className={styles.heroBottom}>
-          <div className={styles.heroBottomSpace} />
-          <div className={styles.heroBottomCaption}>
-            Handcrafted from black leather and silver-tone metal, double wrap
-            bracelet with a combination of ornaments.
-          </div>
-        </div>
+        {/*<div className={styles.heroBottom}>*/}
+        {/*  <div className={styles.heroBottomSpace} />*/}
+        {/*  <div className={styles.heroBottomCaption}>*/}
+        {/*    Handcrafted from black leather and silver-tone metal, double wrap*/}
+        {/*    bracelet with a combination of ornaments.*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
 
       <div className={styles.heroWrapperMobile}>
