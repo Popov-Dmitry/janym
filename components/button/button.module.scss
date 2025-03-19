@@ -7,7 +7,8 @@
   @apply 2xl:text-54px;
   @apply cursor-pointer;
   @apply w-100%;
-  @apply text-center
+  @apply text-center;
+  @apply flex justify-center items-center;
 }
 
 .sfPro {

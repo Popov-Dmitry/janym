@@ -93,7 +93,7 @@ const Bag = () => {
           </span>
         </div>
       </div>
-      <Button text="Check Out" font={isMobile ? "generalSans" : "sfPro"} />
+      <Button text="Check Out" font={isMobile ? "generalSans" : "sfPro"} href="/checkout" />
     </div>
   );
 };
