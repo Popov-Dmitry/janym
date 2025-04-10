@@ -3,6 +3,7 @@
   @apply md:grid-cols-12 md:gap-20px;
   @apply px-40px py-14px;
   @apply relative;
+  @apply text-secondary;
 
   .left {
     @apply flex items-center justify-center col-span-6;

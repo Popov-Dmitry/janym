@@ -131,6 +131,7 @@ module.exports = {
       colors: {
         background: "var(--background)",
         primary: "var(--primary)",
+        secondary: "var(--secondary)"
       },
       fontFamily: {
         "sf-pro": "var(--font-sf-pro)",

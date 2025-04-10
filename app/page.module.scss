@@ -200,6 +200,7 @@
 .productsBlock {
   @include block;
   @apply pb-0;
+  @apply mt-60px;
 }
 
 .products {
