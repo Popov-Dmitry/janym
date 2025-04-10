@@ -26,9 +26,16 @@ export default async function Home() {
           {/*  <div>FW’24</div>*/}
           {/*</div>*/}
         {/*</div>*/}
-        <div className={styles.heroImage}>
-          <Image src="/aral-sea-collection.png" alt="" fill />
-        </div>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          // className={isFullView ? styles.fullViewMedia : styles.media}
+          className={styles.heroImage}
+        >
+          <source src="/product-desktop.mp4" type="video/mp4" />
+        </video>
         {/*<div className={styles.heroBottom}>*/}
         {/*  <div className={styles.heroBottomSpace} />*/}
         {/*  <div className={styles.heroBottomCaption}>*/}
@@ -39,13 +46,13 @@ export default async function Home() {
       </div>
 
       <div className={styles.heroWrapperMobile}>
-        <div className={styles.block}>
-          <div className={styles.heroTitle}>FW’25</div>
+        {/*<div className={styles.block}>*/}
+          {/*<div className={styles.heroTitle}>FW’25</div>*/}
           {/*<div className={styles.heroBottomText}>*/}
           {/*  We’re working to bring our net emissions to zero across our entire*/}
           {/*  carbon footprint.*/}
           {/*</div>*/}
-        </div>
+        {/*</div>*/}
         <video
           autoPlay
           muted
@@ -54,7 +61,7 @@ export default async function Home() {
           // className={isFullView ? styles.fullViewMedia : styles.media}
           className={styles.heroImage}
         >
-          <source src="/hero-video-mobile.mp4" type="video/mp4" />
+          <source src="/product-mobile.mp4" type="video/mp4" />
         </video>
         {/*<img src="/hero-mobile.png" alt="" className={styles.heroImage} />*/}
         {/*<div className={styles.black} />*/}
@@ -106,19 +113,25 @@ export default async function Home() {
           </div>
 
           <div className={styles.colImageWrapper}>
-            <div className={styles.colImage}>
-              <Image
-                src="/about-mobile.png"
-                alt=""
-                fill
+            <div className={joinClassNames(styles.colImage, "flex align-center justify-center")}>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
                 className={styles.mobile}
-              />
-              <Image
-                src="/about-desktop.png"
-                alt=""
-                fill
+              >
+                <source src="/logo-mobile.mp4" type="video/mp4" />
+              </video>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
                 className={styles.desktop}
-              />
+              >
+                <source src="/logo-desktop.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>

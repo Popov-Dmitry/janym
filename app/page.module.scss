@@ -28,9 +28,8 @@
 .container {
   @apply flex flex-col justify-center items-center gap-40px;
   @apply md:gap-100px;
-  @apply pt-38px pb-10px;
+  @apply pb-10px;
   @apply md:pb-40px;
-  @apply md:pt-0;
 }
 
 .block {
@@ -164,9 +163,7 @@
 
 .heroImage {
   @apply relative;
-  @apply w-100% md:h-[400px] 2xl:h-[500px];
-  @apply mt-auto;
-  @apply md:mt-400px;
+  @apply w-100%;
 }
 
 .heroBottom {
