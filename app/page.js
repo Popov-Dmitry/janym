@@ -177,12 +177,14 @@ export default async function Home() {
             </div>
 
             <div className={joinClassNames(styles.colImage, styles.desktop)}>
-              <Image src="/approach-desktop.png" alt="" fill className="py-110px px-90px" />
+              <Image src="/approach.png" alt="" fill className="py-110px px-90px" />
             </div>
           </div>
         </div>
-        <div className={joinClassNames(styles.colImage, styles.mobile)}>
-          <Image src="/approach-mobile.png" alt="" fill />
+        <div className={joinClassNames("px-10px", styles.mobile)}>
+          <div className={styles.colImage}>
+            <Image src="/approach.png" alt="" fill />
+          </div>
         </div>
       </div>
 
@@ -221,16 +223,9 @@ export default async function Home() {
           <div className={styles.colImageWrapper}>
             <div className={styles.colImage}>
               <Image
-                src="/future-collection-mobile.png"
+                src="/future-collection.png"
                 alt=""
                 fill
-                className={styles.mobile}
-              />
-              <Image
-                src="/future-collection-desktop.png"
-                alt=""
-                fill
-                className={styles.desktop}
               />
             </div>
           </div>
