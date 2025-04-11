@@ -2,8 +2,9 @@
   @apply flex;
   @apply lg:flex-col;
   @apply overflow-x-scroll overflow-y-hidden;
-  @apply lg:overflow-y-scroll lg:overflow-x-hidden;
+  @apply lg:overflow-y-hidden lg:overflow-x-hidden;
   @apply overscroll-contain;
+  @apply touch-none;
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -45,6 +46,7 @@
   @apply overflow-x-scroll overflow-y-hidden;
   @apply lg:overflow-y-scroll lg:overflow-x-hidden;
   @apply overscroll-contain;
+  @apply touch-none;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }

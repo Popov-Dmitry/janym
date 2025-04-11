@@ -6,12 +6,14 @@ import { joinClassNames } from "@/utils/join-class-names";
 import useResponsive from "@/hooks/use-responsive";
 
 const MediaSlider = ({ media, className }) => {
-  const { isMobile } = useResponsive();
+  const { isDesktop } = useResponsive();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFullView, setIsFullView] = useState(false);
   const [touchStart, setTouchStart] = React.useState(0);
-  const [touchEnd, setTouchEnd] = React.useState(0);
+  const [touchEnd, setTouchEnd] = React.useState(-1);
   const ref = useRef(null);
+  const mediaRefs = useRef([]);
+  const isScrolling = useRef(false);
 
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -19,44 +21,45 @@ const MediaSlider = ({ media, className }) => {
 
   const handleTouchMove = (e) => {
     setTouchEnd(e.targetTouches[0].clientX);
-  }
+  };
 
   const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 5) {
-      ref.current.scrollBy({ behavior: "smooth", left: ref.current.clientWidth });
-    }
+    const diff = touchStart - touchEnd;
+    if (touchEnd !== -1) {
+      if (diff > 5 && currentIndex + 1 < media?.length) {
+        mediaRefs.current[currentIndex + 1].scrollIntoView({ behavior: "smooth" });
+        setCurrentIndex(currentIndex + 1);
+      }
 
-    if (touchStart - touchEnd < -5) {
-      ref.current.scrollBy({ behavior: "smooth", left: -ref.current.clientWidth });
+      if (diff < -5 && currentIndex > 0) {
+        mediaRefs.current[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
+        setCurrentIndex(currentIndex - 1);
+      }
     }
-  }
+    setTouchStart(0);
+    setTouchEnd(-1);
+  };
 
   const handleWheel = (event) => {
-    if (isMobile) {
-      if (ref.current && ref.current.scrollLeft === ref.current.clientWidth * (currentIndex)) {
-        if (event.deltaX > 0) {
-          ref.current.scrollBy({ behavior: "smooth", left: ref.current.clientWidth });
-        } else {
-          ref.current.scrollBy({ behavior: "smooth", left: -ref.current.clientWidth });
+    if (!isScrolling.current) {
+      isScrolling.current = true;
+      if (event.deltaY > 0) {
+        if (currentIndex + 1 < media?.length) {
+          mediaRefs.current[currentIndex + 1].scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        if (currentIndex > 0) {
+          mediaRefs.current[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
         }
       }
-    } else {
-      if (ref.current && ref.current.scrollTop === ref.current.clientHeight * (currentIndex)) {
-        if (event.deltaY > 0) {
-          ref.current.scrollBy({ behavior: "smooth", top: ref.current.clientHeight });
-        } else {
-          ref.current.scrollBy({ behavior: "smooth", top: -ref.current.clientHeight });
-        }
-      }
+      setTimeout(() => {
+        isScrolling.current = false;
+      }, 600);
     }
   };
 
   const handleScroll = () => {
-    if (isMobile) {
-      if (ref.current) {
-        setCurrentIndex(Math.ceil(ref.current.scrollLeft / ref.current.clientWidth));
-      }
-    } else {
+    if (isDesktop) {
       if (ref.current) {
         setCurrentIndex(Math.ceil(ref.current.scrollTop / ref.current.clientHeight));
       }
@@ -64,15 +67,7 @@ const MediaSlider = ({ media, className }) => {
   };
 
   useEffect(() => {
-    if (isMobile) {
-      if (ref.current && ref.current.scrollLeft === ref.current.clientWidth * (currentIndex)) {
-        ref.current.scrollBy({ behavior: "instant", left: currentIndex });
-      }
-    } else {
-      if (ref.current && ref.current.scrollTop === ref.current.clientHeight * (currentIndex)) {
-        ref.current.scrollBy({ behavior: "instant", top: currentIndex });
-      }
-    }
+    mediaRefs.current[currentIndex].scrollIntoView();
   }, [isFullView]);
 
   return (
@@ -86,11 +81,12 @@ const MediaSlider = ({ media, className }) => {
         onTouchEnd={handleTouchEnd}
         ref={ref}
       >
-        {media?.map((item) => (
+        {media?.map((item, i) => (
           <div
             className={isFullView ? styles.fullViewMediaWrapper : styles.mediaWrapper}
             key={item.source}
             onClick={() => setIsFullView((prevState) => !prevState)}
+            ref={ref => (mediaRefs.current[i] = ref)}
           >
             {item.type === "image" ? (
               <img
@@ -114,7 +110,10 @@ const MediaSlider = ({ media, className }) => {
       </div>
       <div className={(isFullView || media?.length <= 1) ? "hidden" : styles.progress}>
         {media?.map((item, index) => (
-          <div key={item.source} className={index === currentIndex ? styles.currentProgressItem : styles.progressItem} />
+          <div
+            key={item.source}
+            className={index === currentIndex ? styles.currentProgressItem : styles.progressItem}
+          />
         ))}
       </div>
     </div>
