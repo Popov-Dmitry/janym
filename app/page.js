@@ -188,7 +188,7 @@ export default async function Home() {
         </div>
         <div className={joinClassNames("px-10px", styles.mobile)}>
           <div className={styles.colImage}>
-            <Image src="/approach.png" alt="" fill />
+            <img src="/approach.png" alt=""  />
           </div>
         </div>
       </div>
