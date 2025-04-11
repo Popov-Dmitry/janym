@@ -13,7 +13,11 @@
 .empty {
   @apply h-[calc(100vh_-_56px)] w-100%;
   @apply flex justify-center items-center;
-  @apply text-60px;
+  @apply text-26px leading-31px font-general-sans;
+  @apply lg:text-28px lg:leading-32px lg:tracking-[-0.01em];
+  @apply lg:text-32px lg:leading-36px;
+  @apply xl:text-42px xl:leading-46px;
+  @apply 2xl:text-58px 2xl:leading-58px;
 }
 
 .section {
