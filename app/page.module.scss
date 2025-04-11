@@ -1,12 +1,12 @@
 @mixin block {
   @apply px-10px;
-  @apply md:px-40px;
+  @apply md:px-40px md:py-12px;
   @apply w-100%;
 }
 
 @mixin blockFullHeight {
   @include block;
-  @apply md:h-100vh;
+  @apply md:min-h-[calc(100vh_-_58px)];
   @apply [@media(max-height:420px)]:h-auto;
   @apply flex flex-col;
 }
@@ -22,7 +22,7 @@
 .twoCols {
   @apply pt-10px pb-40px md:py-0;
   @apply md:grid md:grid-cols-2;
-  @apply h-100%;
+  @apply h-100% flex-1;
 }
 
 .container {
@@ -65,7 +65,7 @@
 }
 
 .leftColWrapper {
-  @apply flex flex-col;
+  @apply flex flex-col h-100%;
   @apply pr-10px;
   @apply md:py-40px;
 }
