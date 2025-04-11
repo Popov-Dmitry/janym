@@ -89,7 +89,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${sfPro.variable} ${beVietnamPro.variable} ${generalSans.variable} antialiased`}
+        className={`${sfPro.variable} ${beVietnamPro.variable} ${generalSans.variable} antialiased pt-[55px]`}
       >
         <CartProvider>
           <Header />

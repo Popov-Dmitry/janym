@@ -1,8 +1,8 @@
 .mediaSlider {
   @apply flex;
-  @apply md:flex-col;
+  @apply lg:flex-col;
   @apply overflow-x-scroll overflow-y-hidden;
-  @apply md:overflow-y-scroll md:overflow-x-hidden;
+  @apply lg:overflow-y-scroll lg:overflow-x-hidden;
   @apply overscroll-contain;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -11,11 +11,11 @@
     @apply min-h-100% min-w-100%;
     @apply flex items-center justify-center;
     @apply cursor-pointer;
-    @apply md:pl-4px;
+    @apply lg:pl-4px;
   }
 
   .media {
-    @apply object-cover;
+    @apply object-contain;
     @apply max-h-[100%] min-w-100%;
   }
 
@@ -29,7 +29,7 @@
 }
 
 .fullViewWrapper {
-  @apply w-100vw md:w-100vw h-[calc(100vh_-_56px)];
+  @apply w-100vw lg:w-100vw h-[calc(100vh_-_56px)];
   @apply absolute bottom-0 left-0 right-0 top-[56px];
   @apply bg-white;
   @apply flex items-center;
@@ -39,36 +39,36 @@
 .fullView {
   @apply w-fit;
   @apply flex items-center;
-  @apply md:flex-col;
+  @apply lg:flex-col;
   @apply cursor-pointer;
   @apply z-10;
   @apply overflow-x-scroll overflow-y-hidden;
-  @apply md:overflow-y-scroll md:overflow-x-hidden;
+  @apply lg:overflow-y-scroll lg:overflow-x-hidden;
   @apply overscroll-contain;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 .fullViewMediaWrapper {
-  @apply min-w-100vw md:min-w-auto;
+  @apply min-w-100vw lg:min-w-auto;
 }
 
 .fullViewMedia {
   @apply w-100vw;
-  @apply md:h-[calc(100vh_-_56px)] md:w-auto;
+  @apply lg:h-[calc(100vh_-_56px)] lg:w-auto;
 }
 
 .progress {
-  @apply mt-10px md:mt-0;
-  @apply md:absolute md:top-[50%] md:translate-y-[-50%];
-  @apply md:h-[calc(100vh/3)];
+  @apply mt-10px lg:mt-0;
+  @apply lg:absolute lg:top-[50%] lg:translate-y-[-50%];
+  @apply lg:h-[calc(100vh/3)];
   @apply flex gap-10px;
-  @apply md:flex-col
+  @apply lg:flex-col
 }
 
 .progressItem, .currentProgressItem {
   @apply w-100% h-2px;
-  @apply md:h-100% md:w-2px;
+  @apply lg:h-100% lg:w-2px;
 }
 
 .progressItem {

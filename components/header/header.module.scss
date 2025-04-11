@@ -2,8 +2,9 @@
   @apply grid grid-cols-1 w-full;
   @apply md:grid-cols-12 md:gap-20px;
   @apply px-40px py-14px;
-  @apply relative;
+  @apply fixed top-0 left-0 right-0 z-10;
   @apply text-secondary;
+  @apply bg-white;
 
   .left {
     @apply flex items-center justify-center col-span-6;

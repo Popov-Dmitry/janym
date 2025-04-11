@@ -1,26 +1,26 @@
 .container {
-  @apply grid grid-cols-1 gap-20px;
-  @apply md:grid-cols-2;
-  @apply md:min-h-[calc(100vh_-_56px)];
-  @apply px-10px md:px-40px;
+  @apply grid grid-cols-1 gap-40px;
+  @apply lg:flex;
+  @apply lg:min-h-[calc(100vh_-_56px)];
+  @apply px-10px lg:px-40px;
 }
 
 .imageWrapper {
   @apply h-[50vh];
-  @apply md:h-[calc(100vh_-_56px)];
+  @apply lg:h-[calc(100vh_-_56px)];
   @apply overflow-hidden;
 }
 
 .content {
-  @apply md:pt-60px md:mx-0;
+  @apply lg:pt-60px lg:mx-0;
   @apply min-h-100%;
   @apply flex flex-col gap-40px;
-  @apply md:gap-60px;
+  @apply lg:gap-60px;
 }
 
 .title, .description, .price {
   @apply text-26px leading-31px font-general-sans;
-  @apply md:text-28px md:leading-32px md:tracking-[-0.01em];
+  @apply lg:text-28px lg:leading-32px lg:tracking-[-0.01em];
   @apply lg:text-32px lg:leading-36px;
   @apply xl:text-42px xl:leading-46px;
   @apply 2xl:text-58px 2xl:leading-58px;
@@ -28,32 +28,32 @@
 }
 
 .price {
-  @apply md:my-auto;
-  @apply md:py-10px;
+  @apply lg:my-auto;
+  @apply lg:py-10px;
 }
 
 .info {
   @apply flex flex-row-reverse items-start justify-between gap-8px;
-  @apply md:flex-col md:gap-0 md:h-100%;
+  @apply lg:flex-col lg:gap-0 lg:h-100%;
   //@apply mt-42px;
-  //@apply md:mt-60px;
+  //@apply lg:mt-60px;
   //@apply [@media(max-height:950px)]:mt-22px;
 }
 
 .specification {
   @apply text-18px leading-22px font-general-sans;
-  @apply md:text-22px md:leading-24px;
-  @apply lg:text-26px md:leading-28px;
+  @apply lg:text-22px lg:leading-24px;
+  @apply lg:text-26px lg:leading-28px;
   @apply xl:text-28px xl:leading-30px;
   @apply 2xl:text-32px 2xl:leading-38px;
 }
 
 .bottom {
-  @apply md:mt-[-60px];
+  @apply lg:mt-[-60px];
 }
 
 .caption {
-  @apply hidden md:block;
+  @apply hidden lg:block;
   @apply text-14px leading-23px font-general-sans;
   @apply lg:text-16px;
   @apply mb-20px;

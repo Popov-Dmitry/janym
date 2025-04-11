@@ -1,3 +1,94 @@
 .container {
   @apply px-10px md:px-40px;
+  @apply h-[calc(100vh_-_56px)] w-100%;
+  @apply flex justify-center items-center;
+  @apply text-60px;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.input {
+  padding: 0.75rem 0;
+  background: #FFF;
+  border-bottom: 2px solid #000;
+  font-size: 2rem;
+  transition: all 0.2s ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+.required {
+  color: #000;
+  font-weight: 600;
+}
+
+.optional {
+  color: #888;
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+
+.formNote {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.successContainer {
+  text-align: center;
+  padding: 4rem 2rem;
+  @apply px-10px md:px-40px;
+  @apply h-[calc(100vh_-_56px)] w-100%;
+  @apply flex flex-col justify-center items-center;
+  gap: 0.5rem;
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: #555;
+    font-size: 1.1rem;
+  }
 }

@@ -15,13 +15,25 @@ const Bag = () => {
   const { isMobile } = useResponsive();
   const { cart, removeItem } = useCart();
   const [cartDetails, setCartDetails] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   useEffect(() => {
-    (async () => {
+    const fetchCartDetails = async () => {
       const cartDetails = await getProductsFromCart(cart);
       setCartDetails(cartDetails);
-    })();
+      setIsLoading(false);
+    };
+    fetchCartDetails();
   }, [cart]);
+
+  if (isLoading) {
+    return (
+      <div className={joinClassNames(styles.spinnerContainer, styles.empty)}>
+        <div className={styles.spinner}></div>
+      </div>
+    );
+  }
 
   if (cart.length === 0) {
     return (
@@ -33,9 +45,9 @@ const Bag = () => {
 
   return (
     <div className={styles.container}>
-      {cartDetails.map((item) => (
-        <React.Fragment key={item.id}>
-          <Link href={`/shop/${item.slug}`} className={styles.mobile}>
+      {!isLoading && cartDetails.map((item, index) => (
+        <React.Fragment key={`item-${index}`}>
+          <Link href={`/shop/${item.slug}`} className={styles.mobile} key={`mobile-${index}`}>
             <div className={styles.top}>
               <div>{item.title}</div>
               <div className={styles.removeMobile} onClick={() => removeItem(item.slug)}>
@@ -55,7 +67,7 @@ const Bag = () => {
               </div>
             </div>
           </Link>
-          <div className={styles.desktop}>
+          <div className={styles.desktop} key={`desktop-${index}`}>
             <div className={styles.section}>
               <Link href={`/shop/${item.slug}`} className={styles.imageWrapper}>
                 <img src={item.cover} alt={item.title} className={styles.image} />
@@ -66,8 +78,8 @@ const Bag = () => {
                   <div>${item.price}</div>
                 </Link>
                 <div className={styles.specification}>
-                  <div>Size: {item.size}</div>
-                  <div>Material: {item.material}</div>
+                  <div key={`size-${item.id}`}>Size: {item.size}</div>
+                  <div key={`material-${item.id}`}>Material: {item.material}</div>
                 </div>
                 <div className={styles.remove} onClick={() => removeItem(item.slug)}>
                   Remove
@@ -83,6 +95,7 @@ const Bag = () => {
             ? "By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order."
             : "By selecting this box, I agree to the full terms and conditions of purchase and acknowledge that my order might be subject to local duties/taxes imposed by the country of destination (if applicable) that are my.full responsibility."
           }
+          onChange={(checked) => setTermsAccepted(checked)}
         />
         <div className={styles.total}>
           <span className={styles.desktop}>
@@ -93,7 +106,13 @@ const Bag = () => {
           </span>
         </div>
       </div>
-      <Button text="Check Out" font={isMobile ? "generalSans" : "sfPro"} href="/checkout" />
+      <Button 
+        text="Check Out" 
+        font={isMobile ? "generalSans" : "sfPro"} 
+        href={termsAccepted ? "/checkout" : undefined}
+        disabled={!termsAccepted}
+        className={!termsAccepted ? styles.disabledButton : ""}
+      />
     </div>
   );
 };

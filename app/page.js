@@ -13,18 +13,18 @@ export default async function Home() {
     <div className={styles.container}>
       <div className={joinClassNames(styles.heroWrapper)}>
         {/*<div className={styles.hero}>*/}
-          {/*<div className={styles.heroTitleWrapper}>*/}
-          {/*  <div className={styles.heroTitle}>FW’24</div>*/}
-          {/*  <div className={styles.heroSubtitle}>*/}
-          {/*    Janym reimagining Kazakh traditions through a modern lens. Each*/}
-          {/*    collection tells the story of the country, starting with a*/}
-          {/*    response to the Aral tragedy.*/}
-          {/*  </div>*/}
-          {/*</div>*/}
-          {/*<div className={styles.heroCaption}>*/}
-          {/*  <div>Janym Sol</div>*/}
-          {/*  <div>FW’24</div>*/}
-          {/*</div>*/}
+        {/*<div className={styles.heroTitleWrapper}>*/}
+        {/*  <div className={styles.heroTitle}>FW’24</div>*/}
+        {/*  <div className={styles.heroSubtitle}>*/}
+        {/*    Janym reimagining Kazakh traditions through a modern lens. Each*/}
+        {/*    collection tells the story of the country, starting with a*/}
+        {/*    response to the Aral tragedy.*/}
+        {/*  </div>*/}
+        {/*</div>*/}
+        {/*<div className={styles.heroCaption}>*/}
+        {/*  <div>Janym Sol</div>*/}
+        {/*  <div>FW’24</div>*/}
+        {/*</div>*/}
         {/*</div>*/}
         <video
           autoPlay
@@ -47,11 +47,11 @@ export default async function Home() {
 
       <div className={styles.heroWrapperMobile}>
         {/*<div className={styles.block}>*/}
-          {/*<div className={styles.heroTitle}>FW’25</div>*/}
-          {/*<div className={styles.heroBottomText}>*/}
-          {/*  We’re working to bring our net emissions to zero across our entire*/}
-          {/*  carbon footprint.*/}
-          {/*</div>*/}
+        {/*<div className={styles.heroTitle}>FW’25</div>*/}
+        {/*<div className={styles.heroBottomText}>*/}
+        {/*  We’re working to bring our net emissions to zero across our entire*/}
+        {/*  carbon footprint.*/}
+        {/*</div>*/}
         {/*</div>*/}
         <video
           autoPlay
@@ -87,8 +87,8 @@ export default async function Home() {
             <div className={styles.blockTitle}>About Janym</div>
             <div className={styles.leftCol}>
               <div className={styles.leftColDescription}>
-                Janym creates clothing, jewelry by reinterpreting traditional Kazakh patterns and cuts, with all pieces
-                crafted sustainably.
+                Janym creates clothing, jewelry by reinterpreting traditional
+                Kazakh patterns and cuts, with all pieces crafted sustainably.
               </div>
               <div className={styles.leftColBottom}>
                 <div className={styles.leftColBottomTexts}>
@@ -104,7 +104,8 @@ export default async function Home() {
                   <div className={styles.leftColCaption}>Philosophy</div>
                   <div className={styles.leftColBottomText}>
                     <div>
-                      Harmonizing nature and modernity while preserving cultural heritage.
+                      Harmonizing nature and modernity while preserving cultural
+                      heritage.
                     </div>
                   </div>
                 </div>
@@ -113,23 +114,16 @@ export default async function Home() {
           </div>
 
           <div className={styles.colImageWrapper}>
-            <div className={joinClassNames(styles.colImage, "flex align-center justify-center")}>
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className={styles.mobile}
-              >
+            <div
+              className={joinClassNames(
+                styles.colImage,
+                "flex align-center justify-center"
+              )}
+            >
+              <video autoPlay muted loop playsInline className={styles.mobile}>
                 <source src="/logo-mobile.mp4" type="video/mp4" />
               </video>
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className={styles.desktop}
-              >
+              <video autoPlay muted loop playsInline className={styles.desktop}>
                 <source src="/logo-desktop.mp4" type="video/mp4" />
               </video>
             </div>
@@ -154,12 +148,15 @@ export default async function Home() {
                   Fashion
                 </div> */}
                 <div className={styles.leftColDescription}>
-                  Our clothing, made from recycled fabrics and dyed with natural dyes, reduces the carbon footprint and
-                  supports eco-friendly production.
+                  Our clothing, made from recycled fabrics and dyed with natural
+                  dyes, reduces the carbon footprint and supports eco-friendly
+                  production.
                 </div>
                 <div className={styles.leftColBottom}>
                   <div className={styles.leftColCaption}>Materials</div>
-                  <div className={styles.leftColCaption}>Use of vegetable dyes and acids</div>
+                  <div className={styles.leftColCaption}>
+                    Use of vegetable dyes and acids
+                  </div>
                 </div>
                 <div>
                   <div className="grid grid-cols-2 gap-x-20px mt-20px">
@@ -169,7 +166,10 @@ export default async function Home() {
                       <div>Silk</div>
                     </div>
                     <div className={styles.leftColBottomText}>
-                      <div>The desired shade is achieved either with plant-based dyes or through acid treatment.</div>
+                      <div>
+                        The desired shade is achieved either with plant-based
+                        dyes or through acid treatment.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -177,7 +177,12 @@ export default async function Home() {
             </div>
 
             <div className={joinClassNames(styles.colImage, styles.desktop)}>
-              <Image src="/approach.png" alt="" fill className="py-110px px-90px" />
+              <Image
+                src="/approach.png"
+                alt=""
+                fill
+                className="py-110px px-90px object-contain"
+              />
             </div>
           </div>
         </div>
@@ -194,8 +199,9 @@ export default async function Home() {
             <div className={styles.blockTitle}>Upcoming spring collection</div>
             <div className={styles.leftCol}>
               <div className={styles.leftColDescription}>
-                The first collection of clothing and jewelry is dedicated to the changes of the Aral Sea. Asymmetric
-                shapes, embroidery, and colors reflecting the transformation of the water body.
+                The first collection of clothing and jewelry is dedicated to the
+                changes of the Aral Sea. Asymmetric shapes, embroidery, and
+                colors reflecting the transformation of the water body.
               </div>
               <div className={styles.leftColBottom}>
                 <div className={styles.leftColBottomTexts}>
@@ -222,42 +228,55 @@ export default async function Home() {
 
           <div className={styles.colImageWrapper}>
             <div className={styles.colImage}>
-              <Image
+              <video autoPlay muted loop playsInline className={styles.mobile}>
+                <source src="/section-4.mp4" type="video/mp4" />
+              </video>
+              <video autoPlay muted loop playsInline className={styles.desktop}>
+                <source src="/section-4.mp4" type="video/mp4" />
+              </video>
+              {/* <Image
                 src="/future-collection.png"
                 alt=""
                 fill
-              />
+              /> */}
             </div>
           </div>
         </div>
       </div>
 
       <div className={styles.block}>
-        <div className={joinClassNames(styles.blockTitle)}>
-          Package
-        </div>
+        <div className={joinClassNames(styles.blockTitle)}>Package</div>
         <div className={styles.packageGrid}>
           <div className={joinClassNames("col-span-12 md:col-span-10")}>
             <div className={styles.packageDescription}>
-              To reduce production waste, the same packaging is used
-              for different garments, using recycled uncolored material. Only the information sticker differs.
+              To reduce production waste, the same packaging is used for
+              different garments, using recycled uncolored material. Only the
+              information sticker differs.
             </div>
           </div>
         </div>
         <div className={joinClassNames(styles.packageInfo)}>
-          <div className={joinClassNames(styles.leftColBottomTexts, "md:order-2 md:col-span-4")}>
+          <div
+            className={joinClassNames(
+              styles.leftColBottomTexts,
+              "md:order-2 md:col-span-4"
+            )}
+          >
             <div className={styles.leftColCaption}>Informational band</div>
             <div className={styles.leftColBottomText}>
               <div>Variety of informational band for different products.</div>
             </div>
           </div>
-          <div className={joinClassNames(styles.leftColBottomTexts, "md:col-span-8")}>
+          <div
+            className={joinClassNames(
+              styles.leftColBottomTexts,
+              "md:col-span-8"
+            )}
+          >
             <div className={styles.leftColCaption}>Pack</div>
             <div className={styles.leftColBottomText}>
               <div>Recycled uncolored cardboard.</div>
-              <div>
-                Embossing is used to reduce ink consumption.
-              </div>
+              <div>Embossing is used to reduce ink consumption.</div>
             </div>
           </div>
         </div>

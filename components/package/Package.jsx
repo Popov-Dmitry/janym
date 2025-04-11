@@ -13,11 +13,11 @@ const initialState = {
     },
     {
       tag: "/vest.png",
-      packageStyle: joinClassNames("col-span-8")
+      packageStyle: joinClassNames("col-span-8", styles.packageGreen)
     },
     {
       tag: "/shirt.png",
-      packageStyle: joinClassNames("col-span-8")
+      packageStyle: joinClassNames("col-span-8", styles.packageGray)
     }
   ],
   mobile: [
@@ -49,9 +49,8 @@ const Package = () => {
           <div className={joinClassNames(styles.packageTags, styles.packageGrid)}>
             <div className="col-span-5" />
             {state.desktop.map((item, i) => (
-              <>
+              <React.Fragment key={item.tag}>
                 <div
-                  key={item.tag}
                   className={`h-100% col-span-2`}
                 >
                   <div className={`duration-150 hover:scale-105 h-100% `}>
@@ -63,7 +62,7 @@ const Package = () => {
                   </div>
                 </div>
                 {i === 0 && <div />}
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>
