@@ -31,8 +31,8 @@ export default async function Home() {
           muted
           loop
           playsInline
-          // className={isFullView ? styles.fullViewMedia : styles.media}
           className={styles.heroImage}
+          preload="auto"
         >
           <source src="/product-desktop.mp4" type="video/mp4" />
         </video>
@@ -58,8 +58,8 @@ export default async function Home() {
           muted
           loop
           playsInline
-          // className={isFullView ? styles.fullViewMedia : styles.media}
           className={styles.heroImage}
+          preload="auto"
         >
           <source src="/product-mobile.mp4" type="video/mp4" />
         </video>
