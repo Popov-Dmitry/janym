@@ -8,8 +8,8 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.left}>
         <Link href="/" className={styles.logo}>
-          <Image src="/logo.png" width={36} height={28} alt="logo" />
-          <Image src="/janum.svg" width={75} height={28} alt="logo" />
+          <Image src="/logo.svg" width={41} height={30} alt="logo" />
+          <Image src="/janum.svg" width={76} height={28} alt="janum" />
         </Link>
       </div>
       <Link href="/#shop" className={styles.link}>Shop</Link>

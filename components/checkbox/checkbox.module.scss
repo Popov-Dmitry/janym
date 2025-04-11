@@ -19,7 +19,7 @@
 }
 
 .checkmark {
-  @apply border-2 border-black;
+  @apply border-2 border-primary;
   @apply bg-white;
   @apply h-21px w-21px;
   @apply absolute top-0 left-0;
@@ -30,7 +30,7 @@
 }
 
 .container input:checked ~ .checkmark {
-  @apply bg-black;
+  @apply bg-primary;
 }
 
 .checkmark:after {
@@ -43,7 +43,7 @@
 }
 
 .container .checkmark:after {
-  @apply left-[7px] top-[3px] w-5px h-10px;
+  @apply left-[6px] top-[2px] w-5px h-10px;
   @apply border-t-0 border-r-2 border-b-2 border-l-0 border-white;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
