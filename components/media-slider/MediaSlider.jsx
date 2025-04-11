@@ -9,7 +9,27 @@ const MediaSlider = ({ media, className }) => {
   const { isMobile } = useResponsive();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFullView, setIsFullView] = useState(false);
+  const [touchStart, setTouchStart] = React.useState(0);
+  const [touchEnd, setTouchEnd] = React.useState(0);
   const ref = useRef(null);
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 5) {
+      ref.current.scrollBy({ behavior: "smooth", left: ref.current.clientWidth });
+    }
+
+    if (touchStart - touchEnd < -5) {
+      ref.current.scrollBy({ behavior: "smooth", left: -ref.current.clientWidth });
+    }
+  }
 
   const handleWheel = (event) => {
     if (isMobile) {
@@ -61,6 +81,9 @@ const MediaSlider = ({ media, className }) => {
         className={joinClassNames(isFullView ? styles.fullView : styles.mediaSlider, className)}
         onWheel={handleWheel}
         onScroll={handleScroll}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
         ref={ref}
       >
         {media?.map((item) => (
