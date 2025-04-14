@@ -31,7 +31,7 @@
 
 .fullViewWrapper {
   @apply w-100vw lg:w-100vw h-[calc(100vh_-_56px)];
-  @apply absolute bottom-0 left-0 right-0 top-[56px];
+  @apply fixed bottom-0 left-0 right-0 top-[56px];
   @apply bg-white;
   @apply flex items-center;
   @apply overflow-hidden;
