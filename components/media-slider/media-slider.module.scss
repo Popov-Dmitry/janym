@@ -38,7 +38,7 @@
 }
 
 .fullView {
-  @apply w-fit;
+  @apply w-fit h-full;
   @apply flex items-center;
   @apply lg:flex-col;
   @apply cursor-pointer;
