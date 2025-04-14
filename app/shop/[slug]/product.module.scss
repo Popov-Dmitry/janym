@@ -1,6 +1,6 @@
 .container {
-  @apply flex flex-col gap-20px;
-  @apply lg:flex-row;
+  @apply grid grid-cols-1 gap-20px;
+  @apply lg:grid-cols-2;
   @apply lg:min-h-[calc(100vh_-_58px)];
   @apply px-10px lg:px-40px;
 }
