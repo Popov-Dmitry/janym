@@ -123,7 +123,7 @@ export default async function Home() {
               <video autoPlay muted loop playsInline className={styles.mobile}>
                 <source src="/logo-mobile.mp4" type="video/mp4" />
               </video>
-              <video autoPlay muted loop playsInline className={styles.desktop}>
+              <video autoPlay muted loop playsInline className={joinClassNames("h-[calc(100vh_-_58px)] mx-auto", styles.desktop)}>
                 <source src="/logo-desktop.mp4" type="video/mp4" />
               </video>
             </div>
@@ -176,20 +176,27 @@ export default async function Home() {
               </div>
             </div>
 
-            <div className={joinClassNames(styles.colImage, styles.desktop)}>
-              <Image
-                src="/approach.png"
-                alt=""
-                fill
-                className="py-110px px-90px object-contain"
-              />
-            </div>
+            <video autoPlay muted loop playsInline className={joinClassNames("h-[calc(100vh_-_58px)] mx-auto", styles.desktop)}>
+              <source src="/approach.mp4" type="video/mp4" />
+            </video>
+
+            {/*<div className={joinClassNames(styles.colImage, styles.desktop)}>*/}
+            {/*  <Image*/}
+            {/*    src="/approach.png"*/}
+            {/*    alt=""*/}
+            {/*    fill*/}
+            {/*    className="py-110px px-90px object-contain"*/}
+            {/*  />*/}
+            {/*</div>*/}
           </div>
         </div>
-        <div className={joinClassNames("px-10px", styles.mobile)}>
-          <div className={styles.colImage}>
-            <img src="/approach.png" alt=""  />
-          </div>
+        <div className={styles.mobile}>
+          <video autoPlay muted loop playsInline>
+            <source src="/approach.mp4" type="video/mp4" />
+          </video>
+          {/*<div className={styles.colImage}>*/}
+          {/*  <img src="/approach.png" alt=""  />*/}
+          {/*</div>*/}
         </div>
       </div>
 
